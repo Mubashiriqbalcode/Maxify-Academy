@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Payment & Checkout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 font-sans">
+  <div class="flex">
+
+    <!-- Sidebar -->
+
+        <aside class="w-[283px] bg-[#E4E4E4] m-4 rounded-2xl  p-4 space-y-4">
+
+            <div class="flex justify-center ">
+                <img src="Images/maxfylogo.png" alt="" class="w-[77px] h-[77px]">
+            </div>
+
+
+            <nav class="flex flex-col  mt-14 space-y-2">
+
+                <div class="bg-[#673AB7] w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+                    <img src="Images/home-rounded.png" alt="" class=" h-[19px] w-[19px] ">
+                    <a href="Sidebar.html" class=" text-white font-bold px-3 py-2 rounded">Home</a>
+                </div>
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/product.png" alt="" class=" h-[19px] w-[19px] "></a>
+                    <a href="#" class=" font-bold  px-3 py-2 ">Products</a>
+                </div>
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
+
+                    <a href="Mdcat.html" class=" font-bold px-3 py-2 ">MDCAT</a>
+                </div>
+
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
+
+                    <a href="Nums.html" class=" px-3 font-bold py-2 ">NUMS</a>
+                </div>
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
+
+                    <a href="Fsc.html" class=" font-bold px-3 py-2 rounded">F.Sc</a>
+                </div>
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/dashboard4x.png" alt="" class="h-[19px] w-[19px] "></a>
+
+                    <a href="#" class=" px-3 py-2 font-bold rounded">Dashborad</a>
+                </div>
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/Vector (1).png" alt="" class=" h-[19px] w-[19px] "></a>
+
+                    <a href="Pricing.html" class=" px-3 font-bold py-2 rounded">Pricing</a>
+                </div>
+
+                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+
+                    <a href=""> <img src="Images/about4x.png" alt="" class=" h-[19px] w-[19px] "></a>
+
+                    <a href="#" class=" font-bold px-3 py-2 rounded">About Us</a>
+                </div>
+
+
+
+
+
+            </nav>
+
+
+            <div class="flex justify-around">
+                <button class="bg-[#673AB7] w-[178px] font-bold py-2 px-4 rounded-3xl text-white">Get
+                    Started</button>
+            </div>
+
+
+
+        </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow m-4 bg-white p-6 rounded-2xl shadow-lg">
+      <h2 class="text-3xl font-bold text-[#673AB7] mb-6">Payment & Checkout</h2>
+
+      <!-- Payment Methods -->
+      <h3 class="font-semibold text-lg mb-2">Select Payment Method</h3>
+      <div class="space-y-4 mb-4">
+
+        <!-- EasyPaisa -->
+        <div onclick="selectPayment('easypaisa')" id="easypaisa"
+          class="payment-option flex items-center justify-between border p-4 rounded-xl cursor-pointer hover:shadow transition">
+          <div class="flex items-center space-x-2">
+            <input type="radio" name="payment" />
+            <span>EasyPaisa</span>
+          </div>
+          <img src="Images/easypaisa.png" alt="" class="w-20">
+        </div>
+
+        <!-- JazzCash -->
+        <div onclick="selectPayment('jazzcash')" id="jazzcash"
+          class="payment-option flex items-center justify-between border p-4 rounded-xl cursor-pointer hover:shadow transition">
+          <div class="flex items-center space-x-2">
+            <input type="radio" name="payment" />
+            <span>Jazz Cash</span>
+          </div>
+          <img src="Images/jazzcash.png" alt="" class="w-20">
+        </div>
+
+        <!-- Bank Transfer -->
+        <div onclick="selectPayment('bank')" id="bank"
+          class="payment-option flex items-center justify-between border p-4 rounded-xl cursor-pointer hover:shadow transition">
+          <div class="flex items-center space-x-2">
+            <input type="radio" name="payment" />
+            <span>Bank Transfer</span>
+          </div>
+          <img src="Images/visa.png" alt="" class="w-16">
+        </div>
+      </div>
+
+      <button class="bg-[#673AB7] text-white font-semibold px-6 py-2 rounded-lg mt-2">Cancel</button>
+
+      <p class="mt-6 text-sm text-gray-600">
+        No Refunds are allowed once the payment is made... <br><br>
+        Still have Questions? Read <a href="#" class="text-[#673AB7] font-medium">FAQs</a>
+      </p>
+    </main>
+
+    <!-- Payment Detail Right Side (Initially hidden) -->
+    <aside id="receiptSection"
+      class="w-[400px] m-4 p-6 bg-white rounded-2xl shadow-lg space-y-4 hidden border-2 border-[#673AB7]">
+
+      <div class="flex items-center space-x-2 text-orange-500 font-bold">
+        <img src="Images/visa.png" alt="" class="w-5 h-5">
+        <span>VISA</span>
+      </div>
+
+      <p class="text-sm">Transfer the amount to any one of these accounts and upload the screenshot of the receipt</p>
+
+      <div class="text-sm space-y-2">
+        <div>
+          <p><span class="font-semibold">Name:</span> Meezan Bank</p>
+          <p><span class="font-semibold">Title:</span> Maxify LLP</p>
+          <p><span class="font-semibold">Account:</span> 10200109856595</p>
+        </div>
+        <div>
+          <p><span class="font-semibold">Name:</span> International Payments</p>
+          <p><span class="font-semibold">Title:</span> Ali Bin Hassnain</p>
+          <p><span class="font-semibold">Account:</span> 3365242695</p>
+          <p><span class="font-semibold">IBAN:</span> PK74SADA0000003382469853</p>
+        </div>
+      </div>
+
+      <!-- Receipt Upload -->
+      <div class="border-dashed border-2 border-gray-300 p-4 rounded-xl text-center">
+        <p class="mb-2">Drop your receipt here</p>
+        <button class="bg-[#673AB7] text-white px-4 py-1 rounded-lg text-sm">Upload 📁</button>
+      </div>
+
+      <!-- Price Breakdown -->
+      <div class="space-y-2 text-sm">
+        <div class="flex justify-between">
+          <span>Subtotal</span>
+          <span>Rs. 15500</span>
+        </div>
+        <div class="flex justify-between text-green-500">
+          <span>Discount (15% off)</span>
+          <span>-Rs. 2325</span>
+        </div>
+        <hr>
+        <div class="flex justify-between font-bold text-xl text-purple-700">
+          <span>Total</span>
+          <span>Rs. 13175</span>
+        </div>
+      </div>
+
+      <button class="w-full bg-[#673AB7] text-white py-3 rounded-xl text-lg font-semibold">Place Order</button>
+    </aside>
+  </div>
+
+  <script>
+    function selectPayment(method) {
+      // Hide or show receipt section
+      const receipt = document.getElementById('receiptSection');
+      if (method === 'bank') {
+        receipt.classList.remove('hidden');
+      } else {
+        receipt.classList.add('hidden');
+      }
+
+      // Reset all options
+      ['easypaisa', 'jazzcash', 'bank'].forEach(id => {
+        document.getElementById(id).classList.remove('border-2', 'border-[#673AB7]', 'shadow-md');
+      });
+
+      // Highlight selected
+      const selected = document.getElementById(method);
+      selected.classList.add('border-2', 'border-[#673AB7]', 'shadow-md');
+    }
+  </script>
+</body>
+
+</html>

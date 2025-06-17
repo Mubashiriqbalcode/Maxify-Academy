@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxify Pricing Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+    #cartPanel {
+        transition-duration: 300ms;
+    }
+</style>
+
+</head>
+
+<body class="bg-gray-100">
+    <div class="flex">
+
+        <!-- Sidebar (Don't Change This) -->
+        <aside class="w-[283px] bg-[#E4E4E4] m-4 rounded-2xl p-4 space-y-4">
+            <div class="flex justify-center">
+                <img src="Images/maxfylogo.png" alt="" class="w-[77px] h-[77px]">
+            </div>
+
+            <nav class="flex flex-col mt-14 space-y-2">
+                <div class="bg-[#673AB7] w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <img src="Images/home-rounded.png" alt="" class="h-[19px] w-[19px]">
+                    <a href="Sidebar.html" class="text-white font-bold px-3 py-2 rounded">Home</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/product.png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="#" class="font-bold px-3 py-2">Products</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/courseicon.png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="Mdcat.html" class="font-bold px-3 py-2">MDCAT</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/courseicon.png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="Nums.html" class="px-3 font-bold py-2">NUMS</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/courseicon.png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="Fsc.html" class="font-bold px-3 py-2 rounded">F.Sc</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/dashboard4x.png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="#" class="px-3 py-2 font-bold rounded">Dashboard</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/Vector (1).png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="#" class="px-3 font-bold py-2 rounded">Pricing</a>
+                </div>
+                <div class="w-[249px] h-[46px] flex items-center px-3 rounded-[11px]">
+                    <a href=""><img src="Images/about4x.png" alt="" class="h-[19px] w-[19px]"></a>
+                    <a href="#" class="font-bold px-3 py-2 rounded">About Us</a>
+                </div>
+            </nav>
+
+            <div class="flex justify-around">
+                <button class="bg-[#673AB7] w-[178px] font-bold py-2 px-4 rounded-3xl text-white">Get Started</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-10">
+            <h1 class="text-3xl font-bold text-center text-[#673AB7] mb-6">Maxify Pricing Plans</h1>
+            <h2 class="text-center mb-4 text-gray-700 font-semibold">Choose Plans</h2>
+
+            <!-- Plan Buttons -->
+            <div class="flex justify-center space-x-3 mb-10">
+                <button id="btn1" onclick="activateCard(1)" class="plan-btn border border-[#673AB7] text-white bg-[#673AB7] px-4 py-2 rounded-lg font-semibold">All In One</button>
+                <button id="btn2" onclick="activateCard(2)" class="plan-btn border border-[#673AB7] text-[#673AB7] px-4 py-2 rounded-lg font-semibold">MDCAT</button>
+                <button id="btn3" onclick="activateCard(3)" class="plan-btn border border-[#673AB7] text-[#673AB7] px-4 py-2 rounded-lg font-semibold">NUMS</button>
+                <button id="btn4" onclick="activateCard(4)" class="plan-btn border border-[#673AB7] text-[#673AB7] px-4 py-2 rounded-lg font-semibold">MDCAT + NUMS</button>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Beginner -->
+                <div id="card1" class="pricing-card bg-white rounded-xl shadow-lg p-6 text-center h-[420px] flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Beginner</h3>
+                        <p class="text-3xl font-bold mb-4">$10.00</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                        </ul>
+                    </div>
+                    <button class="buy-btn w-full bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded">Buy Now</button>
+                </div>
+
+                <!-- Moderate -->
+                <div id="card2" class="pricing-card bg-white rounded-xl shadow-lg p-6 text-center h-[420px] flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Moderate</h3>
+                        <p class="text-3xl font-bold mb-4">$30.00</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                        </ul>
+                    </div>
+                    <button class="buy-btn w-full bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded">Buy Now</button>
+                </div>
+
+                <!-- Professional -->
+                <div id="card3" class="pricing-card bg-white rounded-xl shadow-lg p-6 text-center h-[420px] flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Professional</h3>
+                        <p class="text-3xl font-bold mb-4">$45.00</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <ul class="text-left space-y-3 mb-6">
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                            <li class="font-semibold text-sm">✔️ It is a long established</li>
+                        </ul>
+                    </div>
+                    <button class="buy-btn w-full bg-gray-200 hover:bg-gray-300 font-bold py-2 px-4 rounded">Buy Now</button>
+                </div>
+            </div>
+        </main>
+
+
+
+    </div>
+
+    <div id="cartPanel" class="fixed top-0 right-0 w-[320px] h-full bg-white shadow-2xl z-50 p-4 transition-transform transform translate-x-full">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-bold">Cart</h2>
+        <button onclick="toggleCart(false)" class="text-red-600 font-bold text-lg">&times;</button>
+    </div>
+    <div class="bg-gray-100 p-3 rounded-xl shadow-inner mb-4">
+        <h3 class="font-bold">Pre-Medical Bundle</h3>
+        <p class="text-sm text-gray-600">SKU: All in One Basic (All in One)</p>
+        <p class="text-sm text-gray-600">Our most affordable all in one plan to get you started.</p>
+        <div class="mt-3">
+            <p class="text-sm font-semibold">Courses:</p>
+            <p class="text-sm">Duration: Till 2025 Exams</p>
+            <p class="text-sm">Price: <span class="line-through text-gray-400">Rs. 15500</span> <span class="text-[#673AB7] font-bold">Rs. 13175</span></p>
+        </div>
+    </div>
+    <div class="text-lg font-bold mb-2 text-[#673AB7]">Total</div>
+    <div class="text-2xl text-[#673AB7] font-bold mb-4">Rs. 13175 <span class="text-sm text-gray-400 line-through">Rs. 15500</span></div>
+    <a href="checkout.html" class="block text-center w-full bg-gradient-to-r from-[#673AB7] to-[#512da8] text-white py-2 rounded-full font-bold">Proceed To Checkout</a>
+</div>
+
+
+
+<script>
+    const buttons = document.querySelectorAll('.plan-btn');
+    const cards = document.querySelectorAll('.pricing-card');
+    const buyBtns = document.querySelectorAll('.buy-btn');
+
+    // Show all cards on plan button click
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Reset all buttons
+            buttons.forEach(b => {
+                b.classList.remove('bg-[#673AB7]', 'text-white');
+                b.classList.add('text-[#673AB7]');
+            });
+
+            // Highlight clicked button
+            btn.classList.add('bg-[#673AB7]', 'text-white');
+
+            // Show all cards
+            cards.forEach(card => {
+                card.classList.remove('hidden');
+            });
+        });
+    });
+
+    // Buy Now button functionality
+    buyBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Reset all cards and buttons
+            cards.forEach(card => {
+                card.classList.remove('border-2', 'border-[#673AB7]');
+            });
+            buyBtns.forEach(b => {
+                b.classList.remove('bg-[#673AB7]', 'hover:bg-[#5a2ea4]', 'text-white');
+                b.classList.add('bg-gray-200', 'hover:bg-gray-300', 'text-black');
+            });
+
+            // Highlight selected card
+            const card = btn.closest('.pricing-card');
+            card.classList.add('border-2', 'border-[#673AB7]');
+            btn.classList.remove('bg-gray-200', 'hover:bg-gray-300', 'text-black');
+            btn.classList.add('bg-[#673AB7]', 'hover:bg-[#5a2ea4]', 'text-white');
+        });
+    });
+
+    // Default: show all cards on page load
+    window.addEventListener('DOMContentLoaded', () => {
+        cards.forEach(card => card.classList.remove('hidden'));
+    });
+
+function toggleCart(show) {
+        const panel = document.getElementById('cartPanel');
+        if (show) {
+            panel.classList.remove('translate-x-full');
+            // Enable global click listener to close cart
+            setTimeout(() => {
+                document.addEventListener('click', outsideClickListener);
+            }, 0);
+        } else {
+            panel.classList.add('translate-x-full');
+            // Remove the listener once hidden
+            document.removeEventListener('click', outsideClickListener);
+        }
+    }
+
+     
+
+    
+
+
+</script>
+
+</body>
+
+</html>
