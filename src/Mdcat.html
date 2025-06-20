@@ -6,6 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDCAT Prep Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+        <style>
+        /* Custom color definitions if not already in your Tailwind config or if using CDN */
+        .bg-primary-purple {
+            background-color: #673AB7; /* Darker purple for active button */
+        }
+        .text-inactive-purple {
+            color: #673AB7; /* Darker purple for inactive text */
+        }
+        .bg-light-gray-bg {
+            background-color: #E4E4E4; /* Light gray for the container */
+        }
+              /* Custom color definitions if not already in your Tailwind config or if using CDN */
+        .text-purple-heading {
+            color: #673AB7; /* A custom purple for the main heading */
+        }
+        .text-check-green {
+            color: #22C55E; /* A vibrant green for the checkmark icons */
+        }
+        .text-subject-card-title {
+  color: #2E1A51; /* Adjust based on your theme */
+}
+
+.text-subject-card-chevron {
+  color: #673AB7; /* Matches purple accent */
+}
+
+.bg-subject-card-light {
+  background-color: #F3F3F3;
+}
+
+    </style>
     <script>
         function showSection(section) {
             const sections = ['chapterwise-english', 'pastpapers', 'mocktests'];
@@ -106,50 +139,142 @@
 
         <!-- Main Content -->
         <main class="flex-1 p-8">
-            <h1 class="text-3xl md:text-5xl text-center font-bold text-purple-700 mb-4">MDCAT Prep Hub</h1>
-            <p class="text-lg text-gray-700 mb-4 max-w-xl">
-                MDCAT Practice Zone is your one-stop platform for comprehensive MDCAT preparation. <br>
-                We offer: ✅ Chapter-wise MCQs ✅ Past Papers ✅ Mock Tests
-            </p>
+        
+    <!-- This is the new section, designed to be placed within a main content area. -->
+<div class="w-full max-w-[700px] mx-auto px-4 text-left space-y-6">
+
+  <!-- Title -->
+  <h2 class="text-[40px] leading-[54px] font-bold text-purple-heading">
+    MDCAT Prep Hub
+  </h2>
+
+  <!-- Description Paragraph -->
+  <p class="text-gray-800 text-lg leading-relaxed max-w-2xl font-medium">
+    MDCAT Practice Zone is your one-stop platform for comprehensive MDCAT preparation.<br>
+    We offer:
+  </p>
+
+<!-- Features List with Checkmarks -->
+<div class="flex flex-col sm:flex-row sm:justify-start items-start flex-wrap gap-x-6 gap-y-3 text-gray-800 text-xl font-semibold">
+  <span class="flex items-center">
+    <i class="fas fa-check-square mr-2 text-2xl" style="color: #18ca28;"></i> Chapter-wise MCQs
+  </span>
+  <span class="flex items-center">
+    <i class="fas fa-check-square mr-2 text-2xl" style="color: #18ca28;"></i> Past Papers
+  </span>
+  <span class="flex items-center">
+    <i class="fas fa-check-square mr-2 text-2xl" style="color: #18ca28;"></i> Mock Tests
+  </span>
+</div>
+
+</div>
+
+
 
             <!-- Navigation Tabs -->
-            <div class="flex justify-center gap-4 mb-10">
-                <button onclick="showSection('chapterwise-english')"
-                    class="bg-purple-600 text-white py-2 px-6 rounded-full font-semibold">Chapter Wise</button>
-                    
-                <button onclick="showSection('pastpapers')"
-                    class="bg-purple-600 text-white py-2 px-6 rounded-full font-semibold">Past Papers</button>
-                <button onclick="showSection('mocktests')"
-                    class="bg-purple-600 text-white py-2 px-6 rounded-full font-semibold">Mock Test</button>
-            </div>
+    
+    
+    <!-- This is the refined responsive segmented control section. -->
+    <!-- It adapts its max-width, button padding, and text size based on screen size. -->
+      <!-- Adjusted Segmented Control Section for "Big, Little, Small" -->
+    <!-- Container adapts width and height based on screen size, with rounded corners and shadow. -->
+    <div class="w-full max-w-[820px] h-auto bg-[#F3F3F3] rounded-[40px] p-1 
+                flex flex-col sm:flex-row items-stretch justify-center mx-auto shadow-sm mt-5" style="margin-top: 40px;">
+
+        <!-- Chapter Wise (Active by default) -->
+        <button id="chapterWiseBtn"  data-segment="chapter-wise"
+                class="flex-1
+                       py-1 px-2 text-xs h-[44px] /* Default/Little */
+                       sm:py-2 sm:px-4 sm:text-sm sm:h-[48px] /* Small */
+                       md:py-3 md:px-6 md:text-base md:h-[52px] /* Big */
+                       rounded-[40px] text-white font-semibold
+                       bg-[#673AB7] transition-all duration-300 ease-in-out
+                       text-center whitespace-nowrap mb-2 sm:mb-0 sm:mr-1
+                       flex items-center justify-center">
+            Chapter Wise
+        </button>
+
+        <!-- Past Papers -->
+        <button id="pastPapersBtn" data-segment="past-papers"
+                class="flex-1
+                       py-1 px-2 text-xs h-[44px] /* Default/Little */
+                       sm:py-2 sm:px-4 sm:text-sm sm:h-[48px] /* Small */
+                       md:py-3 md:px-6 md:text-base md:h-[52px] /* Big */
+                       rounded-[40px] text-[#6B7280] font-semibold
+                       hover:bg-gray-200 transition-all duration-300 ease-in-out
+                       text-center whitespace-nowrap mb-2 sm:mb-0 sm:mx-1
+                       flex items-center justify-center">
+            Past Papers
+        </button>
+
+        <!-- Mock Test -->
+        <button id="mockTestBtn" data-segment="mock-test"
+                class="flex-1
+                       py-1 px-2 text-xs h-[44px] /* Default/Little */
+                       sm:py-2 sm:px-4 sm:text-sm sm:h-[48px] /* Small */
+                       md:py-3 md:px-6 md:text-base md:h-[52px] /* Big */
+                       rounded-[40px] text-[#6B7280] font-semibold
+                       hover:bg-gray-200 transition-all duration-300 ease-in-out
+                       text-center whitespace-nowrap sm:ml-1
+                       flex items-center justify-center">
+            Mock Test
+        </button>
+    </div>
+
+
 
             <!-- Sections -->
-            <div id="chapterwise-english">
-                <div onclick="toggleChapters('english')"
-                    class="cursor-pointer flex items-center justify-between bg-gray-200 rounded-2xl px-6 py-4 shadow mb-4">
-                    <div class="flex items-center gap-4">
-                        <img src="Images/english.png" alt="English" class="w-12 h-12">
-                        <p class="text-xl font-semibold text-purple-700">English</p>
-                    </div>
-                    <span class="text-purple-700 font-semibold">Chapters ▼</span>
-                </div>
-                <div id="chapters-english" class="hidden mb-4 space-y-2">
-                    <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl shadow">
-                        <div class="flex items-center gap-3">
-                            <img src="Images/chap1.png" alt="Chapter Icon" class="w-8 h-8">
-                            <span class="font-medium">Ch 1: Grammar</span>
-                        </div>
-                        <button class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm">Open</button>
-                    </div>
-                    <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl shadow">
-                        <div class="flex items-center gap-3">
-                            <img src="Images/chap2.png" alt="Chapter Icon" class="w-8 h-8">
-                            <span class="font-medium">Ch 2: Vocabulary</span>
-                        </div>
-                        <button class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm">Open</button>
-                    </div>
-                </div>
-            </div>
+       <div id="chapterwise-english" class="w-full max-w-[95%] lg:max-w-[1100px] mx-auto mt-6" style="margin-top: 40px;">
+  <!-- Toggle Header -->
+  <div onclick="toggleChapters('english')" 
+       class="cursor-pointer flex items-center justify-between bg-[#47287f] rounded-lg px-3 py-2 shadow-md">
+    
+    <!-- Icon & Title -->
+    <div class="flex items-center gap-3 bg- text-purple-700">
+      <img src="Images/english.png" alt="English" class="w-[48px] h-[48px]">
+      <p class="font-[Manrope] font-bold text-[22px] leading-[26px] text-white">
+        English
+      </p>
+    </div>
+
+    <!-- Arrow -->
+    <img id="arrow-english" src="Images/mingcute_down-fill.png" alt="Toggle Arrow"
+         class="w-[24px] h-[24px] transition-transform duration-300">
+  </div>
+
+  <!-- Chapter List -->
+  <div id="chapters-english" class="hidden bg-[#ededed] mt-3 rounded-lg p-3 space-y-3">
+    
+    <!-- Chapter 1 -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
+      <div class="flex items-center gap-3">
+        <img src="Images/chap1.png" alt="Chapter 1" class="w-[36px] h-[36px]">
+        <span class="font-[Manrope] text-[18px] font-semibold text-gray-800">Ch 1: Grammar</span>
+      </div>
+      <a href="checkbox.html">
+        <button class="text-white text-xs font-medium rounded-full px-5 py-1.5 hover:shadow-md transition"
+                style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">
+          Open
+        </button>
+      </a>
+    </div>
+
+    <!-- Chapter 2 -->
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
+      <div class="flex items-center gap-3">
+        <img src="Images/chap2.png" alt="Chapter 2" class="w-[36px] h-[36px]">
+        <span class="font-[Manrope] text-[18px] font-semibold text-gray-800">Ch 2: Vocabulary</span>
+      </div>
+      <a href="checkbox.html">
+        <button class="text-white text-xs font-medium rounded-full px-5 py-1.5 hover:shadow-md transition"
+                style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">
+          Open
+        </button>
+      </a>
+    </div>
+
+  </div>
+</div>
 
            
 
@@ -200,9 +325,122 @@
                     </div>
                 </div>
             </div>
+<div id="chapterWiseSection" class="w-full max-w-[1289px] mx-auto space-y-3 mt-[30px] hidden">
+
+
+  <!-- Subject Card -->
+  <div class="flex items-center justify-between bg-[#F3F3F3] rounded-[10px] h-[80px] px-3 py-2 shadow-sm">
+    <div class="flex items-center gap-3">
+      <img src="Images/image 14.png" alt="Physics Icon"
+           class="w-[48px] h-[48px] rounded-full">
+      <p class="font-[Manrope] font-bold text-[22px] leading-[20px] text-[#673AB7]">Physics</p>
+    </div>
+    <span class="text-[#673AB7] font-semibold text-[16px]">
+      CHAPTERS <i class="fas fa-chevron-down ml-1"></i>
+    </span>
+  </div>
+
+  <!-- Chemistry -->
+  <div class="flex items-center justify-between bg-[#F3F3F3] rounded-[10px] h-[80px] px-3 py-2 shadow-sm">
+    <div class="flex items-center gap-3">
+      <img src="Images/image 15.png" alt="Chemistry Icon"
+           class="w-[48px] h-[48px] rounded-full">
+      <p class="font-[Manrope] font-bold text-[22px] leading-[20px] text-[#673AB7]">Chemistry</p>
+    </div>
+    <span class="text-[#673AB7] font-semibold text-[16px]">
+      CHAPTERS <i class="fas fa-chevron-down ml-1"></i>
+    </span>
+  </div>
+
+  <!-- Biology -->
+  <div class="flex items-center justify-between bg-[#F3F3F3] rounded-[10px] h-[80px] px-3 py-2 shadow-sm">
+    <div class="flex items-center gap-3">
+      <img src="Images/image 18.png" alt="Biology Icon"
+           class="w-[48px] h-[48px] rounded-full">
+      <p class="font-[Manrope] font-bold text-[22px] leading-[20px] text-[#673AB7]">Biology</p>
+    </div>
+    <span class="text-[#673AB7] font-semibold text-[16px]">
+      CHAPTERS <i class="fas fa-chevron-down ml-1"></i>
+    </span>
+  </div>
+
+  <!-- Logical Reasoning -->
+  <div class="flex items-center justify-between bg-[#F3F3F3] rounded-[10px] h-[80px] px-3 py-2 shadow-sm">
+    <div class="flex items-center gap-3">
+      <img src="Images/image 19.png" alt="Logical Reasoning Icon"
+           class="w-[48px] h-[48px] rounded-full">
+      <p class="font-[Manrope] font-bold text-[22px] leading-[20px] text-[#673AB7]">Logical Reasoning</p>
+    </div>
+    <span class="text-[#673AB7] font-semibold text-[16px]">
+      CHAPTERS <i class="fas fa-chevron-down ml-1"></i>
+    </span>
+  </div>
+
+</div>
+
 
         </main>
+        
     </div>
+
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const segmentButtons = document.querySelectorAll('[data-segment]');
+
+            segmentButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active styles from all buttons
+                    segmentButtons.forEach(btn => {
+                        btn.classList.remove('bg-[#673AB7]', 'text-white'); // Use arbitrary values here
+                        btn.classList.add('text-[#6B7280]'); // Use arbitrary values here
+                        // Add hover effect back for inactive buttons
+                        btn.classList.add('hover:bg-gray-200');
+                    });
+
+                    // Add active styles to the clicked button
+                    button.classList.add('bg-[#673AB7]', 'text-white'); // Use arbitrary values here
+                    button.classList.remove('text-[#6B7280]'); // Use arbitrary values here
+                    // Remove hover effect from the active button to match screenshot
+                    button.classList.remove('hover:bg-gray-200');
+                });
+            });
+        });
+    </script>
+<script>
+  function toggleChapters(subject) {
+    const chapterBox = document.getElementById(`chapters-${subject}`);
+    const arrow = document.getElementById(`arrow-${subject}`);
+
+    chapterBox.classList.toggle('hidden');
+
+    if (chapterBox.classList.contains('hidden')) {
+      arrow.style.transform = "rotate(0deg)";
+    } else {
+      arrow.style.transform = "rotate(180deg)";
+    }
+  }
+</script>
+<script>
+  const chapterWiseBtn = document.getElementById("chapterWiseBtn");
+  const chapterWiseSection = document.getElementById("chapterWiseSection");
+
+  // If you have other buttons, you can collect them here
+  const otherButtons = document.querySelectorAll("[data-segment]:not(#chapterWiseBtn)");
+
+  chapterWiseBtn.addEventListener("click", () => {
+    // Toggle visibility on button click
+    chapterWiseSection.classList.toggle("hidden");
+  });
+
+  otherButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Hide chapter wise section if any other button is clicked
+      chapterWiseSection.classList.add("hidden");
+    });
+  });
+</script>
+
 </body>
 
 </html>
