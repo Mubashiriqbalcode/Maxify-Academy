@@ -7,178 +7,18 @@
     <title>Maxify Checkout with Responsive Sidebar</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Custom colors or specific overrides if needed.
-           The CDN version of Tailwind can be extended via tailwind.config.js
-           in a build process, but with CDN, inline styles or custom utility classes
-           defined below would be the way.
-        */
-        .bg-custom-purple {
-            background-color: #673AB7; /* A custom purple color for the active sidebar item */
-        }
-        .text-custom-purple-dark {
-            color: #673AB7; /* Darker purple for text if needed */
-        }
-          
-   
-        input[type='radio'] {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: 50%;
-            border: 2px solid #D1D5DB; /* gray-300 */
-            width: 1.25rem; /* 20px */
-            height: 1.25rem; /* 20px */
-            cursor: pointer;
-            outline: none;
-            display: inline-block;
-            position: relative;
-            flex-shrink: 0;
-        }
-
-        input[type='radio']:checked {
-            border-color: #2563EB; /* blue-600 */
-            background-color: #2563EB; /* blue-600 */
-        }
-
-        input[type='radio']:checked::before {
-            content: '';
-            display: block;
-            width: 0.5rem; /* 8px */
-            height: 0.5rem; /* 8px */
-            background-color: white;
-            border-radius: 50%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* Specific style for the correct green radio button */
-        input[type='radio'].radio-green-checked:checked {
-            border-color: #16A34A; /* green-600 */
-            background-color: #16A34A; /* green-600 */
-        }
-      .donut-chart-container {
-            width: 120px;
-            height: 120px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Equivalent to shadow-lg */
-            background-color: white;
-            /* Adjust position for responsiveness.
-               On smaller screens, you might want it below content or centered.
-               For this example, it will float to bottom-right.
-            */
-            right: 1rem; /* Adjust as needed */
-            bottom: 1rem; /* Adjust as needed */
-        }
-
-        .donut-chart-svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transform: rotate(-90deg); /* Start from the top */
-        }
-
-        .chart-circle {
-            fill: none;
-            stroke-width: 10;
-            stroke-linecap: round; /* For rounded ends of segments */
-        }
- @media (min-width: 1024px) {
-  .your-container {
-    display: block !important; /* or display: initial; or display: unset; */
-  }
-}
-
-
-    </style>
-</head>
+     <link rel="stylesheet" href="css/QuizBuilder.css">
+</head> 
 
 <body class="bg-gray-100 font-sans antialiased flex flex-col lg: min-h-screen">
 <div class="flex">
-  <!-- Fixed Sidebar -->
-  <aside class="w-[283px] bg-[#E4E4E4] p-4 rounded-2xl h-full">
-  <div class="flex justify-center ">
-                <img src="Images/maxfylogo.png" alt="" class="w-[77px] h-[77px]">
-            </div>
+  <?php
+// no isHomePage set here
+include '../Includes/Sidebar.php';
+?>
 
 
-            <nav class="flex flex-col  mt-14 space-y-2">
-
-                <div class="bg-[#673AB7] w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-                    <img src="Images/home-rounded.png" alt="" class=" h-[19px] w-[19px] ">
-                    <a href="Sidebar.html" class=" text-white font-bold px-3 py-2 rounded">Home</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/product.png" alt="" class=" h-[19px] w-[19px] "></a>
-                    <a href="#" class=" font-bold  px-3 py-2 ">Products</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" font-bold px-3 py-2 ">MDCAT</a>
-                </div>
-
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Nums.html" class=" px-3 font-bold py-2 ">NUMS</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Fsc.html" class=" font-bold px-3 py-2 rounded">F.Sc</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/dashboard4x.png" alt="" class="h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" px-3 py-2 font-bold rounded">Dashborad</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/Vector (1).png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Pricing.html" class=" px-3 font-bold py-2 rounded">Pricing</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/about4x.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" font-bold px-3 py-2 rounded">About Us</a>
-                </div>
-
-
-
-
-
-            </nav>
-
-
-            <div class="flex justify-around">
-                <button class="bg-[#673AB7] w-[178px] font-bold py-2 px-4 rounded-3xl text-white">Get
-                    Started</button>
-            </div>
-
-  </aside>
+  
 
   <!-- Main Content (pushed to the right) -->
 <main class="w-full p-4 space-y-6">
@@ -397,7 +237,7 @@ Dummy Text
     </div>
 
     <!-- Centered Image Below -->
-    <img src="Images/Frame.png" alt="Chart Image" class="w-[90px] h-[90px]" />
+    <img src="../Images/Frame.png" alt="Chart Image" class="w-[90px] h-[90px]" />
 
   </div>
 </div>
@@ -423,7 +263,7 @@ Dummy Text
     <div class="w-full px-4 py-6 space-y-6">
 
 </div>
-    
+    <script src="js/Quizbuilder.js"></script>
     </body>
 
 </html>

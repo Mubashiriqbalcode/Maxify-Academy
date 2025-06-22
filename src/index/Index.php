@@ -10,275 +10,166 @@
 <!-- Slick Carousel CSS -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
+ <link rel="stylesheet" href="css/index.css">
 <style>
-        /* Apply Manrope font globally if desired */
-        body {
-            font-family: 'Manrope', sans-serif;
-        }
-
-        /* Custom colors for buttons if not in Tailwind config */
-        .border-red-700-custom { border-color: #990000; } /* Adjusted red from image */
-        .text-red-700-custom { color: #990000; } /* Adjusted red from image */
-        .shadow-red-400-custom { box-shadow: 0 10px 15px -3px rgba(255, 0, 0, 0.4), 0 4px 6px -2px rgba(255, 0, 0, 0.2); } /* red-400 shadow */
-
-        .border-blue-500-custom { border-color: #0B50B8; }
-        .text-blue-500-custom { color: #0B50B8; }
-        .shadow-blue-500-custom { box-shadow: 0 10px 15px -3px rgba(11, 80, 184, 0.4), 0 4px 6px -2px rgba(11, 80, 184, 0.2); }
-
-        .border-green-500-custom { border-color: #08A300; }
-        .text-green-500-custom { color: #08A300; }
-        .shadow-green-500-custom { box-shadow: 0 10px 15px -3px rgba(8, 163, 0, 0.4), 0 4px 6px -2px rgba(8, 163, 0, 0.2); }
-
-        /* More specific blues from your snippet for Shortlisting button */
-        .border-dark-blue-custom { border-color: #052452; }
-        .text-light-blue-custom { color: #3A57B7; }
-        .shadow-dark-blue-custom { box-shadow: 0 10px 15px -3px rgba(5, 36, 82, 0.4), 0 4px 6px -2px rgba(5, 36, 82, 0.2); }
-
-        /* Specific red for Flashcards button */
-        .border-flashcard-red-custom { border-color: #990000; }
-        .text-flashcard-red-custom { color: #990000; }
-        .shadow-flashcard-red-custom { box-shadow: 0 10px 15px -3px rgba(153, 0, 0, 0.4), 0 4px 6px -2px rgba(153, 0, 0, 0.2); }
-
-        /* Ribbon icon styling for High Achievers card */
-        .ribbon-icon {
-            position: absolute;
-            top: -15px; /* Adjust to float above the card */
-            right: -15px; /* Adjust to float outside the card */
-            width: 50px; /* Size of the ribbon */
-            height: 50px;
-            background-color: #FFD700; /* Gold color */
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            font-size: 1.5rem; /* Icon size */
-            color: #FFFFFF; /* White star inside */
-        }
-        .ribbon-icon::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold gradient */
-            transform: scale(1.1); /* Slight larger background */
-            z-index: -1;
-        }
-
+   
 </style>
 
 </head>
 
 <body>
-
-<div class="grid lg:grid-cols-[283px_1fr] min-h-screen">
-
-  <!-- Sidebar -->
-    <aside class="w-[283px] bg-[#E4E4E4] m-4 rounded-2xl  p-4 space-y-4 " style="height: 400rcax;">
-
-            <div class="flex justify-center ">
-                <img src="Images/maxfylogo.png" alt="" class="w-[77px] h-[77px]">
-            </div>
-
-
-            <nav class="flex flex-col  mt-14 space-y-2">
-
-                <div class="bg-[#673AB7] w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-                    <img src="Images/home-rounded.png" alt="" class=" h-[19px] w-[19px] ">
-                    <a href="Sidebar.html" class=" text-white font-bold px-3 py-2 rounded">Home</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/product.png" alt="" class=" h-[19px] w-[19px] "></a>
-                    <a href="#" class=" font-bold  px-3 py-2 ">Products</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Mdcat.html" class=" font-bold px-3 py-2 ">MDCAT</a>
-                </div>
-
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Nums.html" class=" px-3 font-bold py-2 ">NUMS</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Fsc.html" class=" font-bold px-3 py-2 rounded">F.Sc</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/dashboard4x.png" alt="" class="h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" px-3 py-2 font-bold rounded">Dashborad</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/Vector (1).png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Pricing.html" class=" px-3 font-bold py-2 rounded">Pricing</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/about4x.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" font-bold px-3 py-2 rounded">About Us</a>
-                </div>
-
-
-
-
-
-            </nav>
-
-
-            <div class="flex justify-around">
-                <button class="bg-[#673AB7] w-[178px] font-bold py-2 px-4 rounded-3xl text-white">Get
-                    Started</button>
-            </div>
-
-
-
-        </aside>
+<div class="grid lg:grid-cols-[260px_1fr] min-h-screen overflow-hidden p-2  ">
+<?php
+$isHomePage = true;
+include '../Includes/Sidebar.php';
+?>
 
 
   <!-- Main Content Area -->
-  <main class="p-6 lg:p-10 xl:px-14 xl:py-12 space-y-10 ">
-    <!-- Heading Section -->
-   <!-- Overall Container for the Two-Column Layout -->
-    <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
-        <!-- Left Section -->
-        <section class="space-y-7 px-4 py-6 lg:p-0">
-            <!-- Welcome Title Section -->
-            <div class="text-3xl sm:text-4xl font-bold">
-                <h1>Welcome to <span class="text-[#673AB7] text-4xl sm:text-5xl">MaXify</span> Academy</h1>
-                <div class="mt-6 max-w-full lg:max-w-4xl">
-                    <h1 class="text-[#673AB7] text-3xl sm:text-4xl font-bold">Pakistan’s #1 Platform for your Entrance Exams</h1>
-                </div>
-            </div>
+  <main class="w-full p-3 lg:p-6 xl:p-8 space-y-10 overflow-hidden">
 
-            <!-- Buttons Section -->
-            <div class="flex flex-wrap gap-4">
-                <!-- MDCAT Button -->
-                <div class="rounded-lg flex justify-around items-center p-3 w-[160px] h-[50px]
-                            shadow-md shadow-red-400-custom border border-red-700-custom text-red-700-custom
-                            hover:bg-red-50 transition-colors duration-200">
-                    <img src="https://placehold.co/24x24/FFFFFF/FF0000?text=MD" alt="MDCAT Icon" class="w-6 h-6">
-                    <button class="text-sm font-semibold">MDCAT</button>
-                </div>
+    <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6">
 
-                <!-- AI Quiz Builder Button -->
-                <div class="rounded-lg flex justify-around items-center p-3 w-[160px] h-[50px]
-                            shadow-md shadow-blue-500-custom border border-blue-500-custom text-blue-500-custom
-                            hover:bg-blue-50 transition-colors duration-200">
-                    <img src="https://placehold.co/24x24/FFFFFF/0000FF?text=AI" alt="AI Quiz Builder Icon" class="w-6 h-6">
-                    <button class="text-sm font-semibold whitespace-nowrap">AI Quiz Builder</button>
-                </div>
-
-                <!-- NUMS Button -->
-                <div class="rounded-lg flex justify-around items-center p-3 w-[160px] h-[50px]
-                            shadow-md shadow-green-500-custom border border-green-500-custom text-green-500-custom
-                            hover:bg-green-50 transition-colors duration-200">
-                    <img src="https://placehold.co/24x24/FFFFFF/00FF00?text=NU" alt="NUMS Icon" class="w-6 h-6">
-                    <button class="text-sm font-semibold">NUMS</button>
-                </div>
-
-                <!-- Shortlisting Button -->
-                <div class="rounded-lg flex justify-around items-center p-3 w-[160px] h-[50px]
-                            shadow-md shadow-dark-blue-custom border border-dark-blue-custom text-light-blue-custom
-                            hover:bg-blue-50 transition-colors duration-200">
-                    <img src="https://placehold.co/24x24/FFFFFF/00008B?text=SL" alt="Shortlisting Icon" class="w-6 h-6">
-                    <button class="text-sm font-semibold whitespace-nowrap">Shortlisting</button>
-                </div>
-
-                <!-- F.SC Button -->
-                <div class="rounded-lg flex justify-around items-center p-3 w-[160px] h-[50px]
-                            shadow-md shadow-green-500-custom border border-green-500-custom text-green-500-custom
-                            hover:bg-green-50 transition-colors duration-200">
-                    <img src="https://placehold.co/24x24/FFFFFF/008000?text=FS" alt="F.SC Icon" class="w-6 h-6">
-                    <button class="text-sm font-semibold">F.SC</button>
-                </div>
-
-                <!-- Flashcards Button -->
-                <div class="rounded-lg flex justify-around items-center p-3 w-[160px] h-[50px]
-                            shadow-md shadow-flashcard-red-custom border border-flashcard-red-custom text-flashcard-red-custom
-                            hover:bg-red-50 transition-colors duration-200">
-                    <img src="https://placehold.co/24x24/FFFFFF/800000?text=FC" alt="Flashcards Icon" class="w-6 h-6">
-                    <button class="text-sm font-semibold">Flashcards</button>
-                </div>
-            </div>
-
-            <!-- Discount Ends In Section (placeholder as it's not fully detailed yet) -->
-           <section>
-      <h1 class="text-[#673AB7] text-4xl font-bold mb-8">Discount Ends In</h1>
-
-      <div class="flex flex-wrap gap-10 items-center">
-        <div class="flex justify-center items-center w-52 h-52 border shadow-2xl shadow-[#2a2525] rounded-full">
-          <h3 class="text-[#673AB7] text-3xl font-bold">6:00:47</h3>
+      <!-- Left Section -->
+      <section class="space-y-6 px-2 lg:p-0">
+        <div class="text-2xl sm:text-3xl font-bold leading-snug">
+          <h1>Welcome to <span class="text-[#673AB7] text-3xl sm:text-4xl">MaXify</span> Academy</h1>
+          <div class="mt-4">
+            <h2 class="text-[#673AB7] text-2xl sm:text-3xl font-bold">Pakistan’s #1 Platform for your Entrance Exams</h2>
+          </div>
         </div>
 
-        <div class="space-y-5">
-          <button class="rounded-3xl px-6 py-2 bg-[#673AB7] text-white">Avail Now</button>
-          <p class="font-bold">Join Our Guidance Community</p>
-        </div>
-      </div>
-    </section>
-        </section>
+        <!-- Buttons -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
 
- <aside class="px-2 py-3 lg:p-0">
+        <div
+  class="rounded-lg flex items-center justify-around p-2 h-[48px] text-red-700 hover:bg-red-50 transition"
+  style="border: 1px solid #FF0000; box-shadow: 4px 19px 20px -15px #FF0000;"
+>
+  <img src="https://placehold.co/22x22/FFFFFF/FF0000?text=MD" alt="MDCAT Icon" class="w-5 h-5">
+  <span class="text-sm font-semibold">MDCAT</span>
+</div>
+
+
+          <div
+  class="rounded-lg flex items-center justify-around p-2 h-[48px] text-blue-700 hover:bg-blue-50 transition"
+  style="border: 1px solid #0B50B8; box-shadow: 4px 19px 20px -15px #0B50B8;"
+>
+  <img src="https://placehold.co/22x22/FFFFFF/0000FF?text=AI" alt="AI Icon" class="w-5 h-5">
+  <span class="text-sm font-semibold">AI Quiz Builder</span>
+</div>
+
+
+       <div
+  class="rounded-lg flex items-center justify-around p-2 h-[48px] text-green-700 hover:bg-green-50 transition"
+  style="border: 1px solid #079200; box-shadow: 4px 19px 20px -15px #08A300;"
+>
+  <img src="https://placehold.co/22x22/FFFFFF/00FF00?text=NU" alt="NUMS Icon" class="w-5 h-5">
+  <span class="text-sm font-semibold">NUMS</span>
+</div>
+
+
+        <div
+  class="rounded-lg flex items-center justify-around p-2 h-[48px] text-blue-800 hover:bg-blue-50 transition"
+  style="border: 1px solid #052452; box-shadow: 4px 19px 20px -15px #0B50B8;"
+>
+  <img src="https://placehold.co/22x22/FFFFFF/00008B?text=SL" alt="Shortlisting" class="w-5 h-5">
+  <span class="text-sm font-semibold">Shortlisting</span>
+</div>
+
+
+         <div
+  class="rounded-lg flex items-center justify-around p-2 h-[48px] text-green-700 hover:bg-green-50 transition"
+  style="
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #089D00 0%, #033700 100%);
+    border-image-slice: 1;
+    box-shadow: 4px 19px 20px -15px #089D00;
+  "
+>
+  <img src="https://placehold.co/22x22/FFFFFF/008000?text=FS" alt="F.SC Icon" class="w-5 h-5">
+  <span class="text-sm font-semibold">F.SC</span>
+</div>
+
+<div
+  class="rounded-lg flex items-center justify-around p-2 h-[48px] text-red-800 hover:bg-red-50 transition"
+  style="
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, #990000 0%, #330000 100%);
+    border-image-slice: 1;
+    box-shadow: 4px 19px 20px -15px #990000;
+  "
+>
+  <img src="https://placehold.co/22x22/FFFFFF/800000?text=FC" alt="Flashcards" class="w-5 h-5">
+  <span class="text-sm font-semibold">Flashcards</span>
+</div>
+
+
+        </div>
+
+        <!-- Discount Section -->
+     <section class=" my-10">
+  <h2 class="text-[#673AB7] text-3xl font-bold mb-6 font-[Manrope]">Discount Ends In</h2>
+
+  <div class="flex flex-wrap gap-6 items-center justify-start">
+    <!-- Animated Circular Timer -->
+<div
+  class="flex justify-center items-center w-44 h-44 rounded-full animate-pulse transition duration-300"
+  style="
+    background: linear-gradient(180deg, #E1E1E1 0%, #FFFFFF 100%);
+    box-shadow:
+      0px 40.27px 80.53px 0px #3333332A,
+      inset 0px 10.65px 10.65px 0px #FFFFFF,
+      inset 0px -10.65px 10.65px 0px #D9D9D9;
+  "
+>
+  <h3 id="timer" class="text-[#673AB7] text-2xl font-bold font-[Manrope]">00:00:00</h3>
+</div>
+
+
+    <div class="space-y-4 text-center">
+    <button
+  class="w-[178px] h-[42px] rounded-[30px] bg-gradient-to-b from-[#673AB7] to-[#2E1A51] text-white font-[Manrope] font-semibold text-[15px] leading-[22px] transition duration-300 hover:opacity-90"
+>
+  Avail Now
+</button>
+
+      <p class="font-bold text-sm font-[Manrope]">Join Our Guidance Community</p>
+    </div>
+  </div>
+</section>
+
+
+      </section>
+
+      <!-- Achiever Section -->
+      <aside class="px-2 py-3 lg:p-0">
+  <h2 class="font-[Manrope] font-bold text-[24px] text-center leading-[22px] text-[#673AB7] mb-4">
+    Our High Achievers
+  </h2>
+
   <div class="flex flex-col justify-center items-center">
+    <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-52 h-60 bg-[#E4D5FF] overflow-hidden">
+      <div class="absolute -top-2 -right-2 z-10">
+      <img src="../Images/medal.png" alt="medal" class="w-[30px] h-[30px]">
 
-    <!-- Smaller Achiever Card -->
-    <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
-      
-      <!-- Smaller Medal Icon -->
-      <div class="absolute -top-3 -right-3 z-10">
-        <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
       </div>
-
-      <!-- Achiever Image -->
-      <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+      <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
     </div>
 
-    <!-- Smaller Details Card -->
-    <div class="flex flex-col relative -mt-6 justify-center text-center 
-                bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
+    <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-40 py-1 px-2 text-xs font-semibold shadow">
       <p>Mubashir Iqbal</p>
       <p>200/200</p>
       <p>MDCAT</p>
     </div>
-
   </div>
 </aside>
 
 
     </div>
-
-    <!-- Countdown Section -->
-  
-<!-- ........................................................ -->
-
-
-  
-
-<!-- ..................................................... -->
-
   </main>
 </div>
+
 
 
 
@@ -363,7 +254,7 @@
     <p class="text-base text-[#535353] mt-4">MCQ’s with Detailed Explanation</p>
     <p class="text-base text-[#535353] mt-2">On your One click Away</p>
     <div class="absolute bottom-6 right-6 w-28 h-28">
-      <img src="Images/card1.png" alt="MCQ Icon" class="w-full h-full object-contain">
+      <img src="../Images/card1.png" alt="MCQ Icon" class="w-full h-full object-contain">
     </div>
   </div>
 
@@ -372,7 +263,7 @@
     <h2 class="text-4xl font-bold text-[#0B50B8]">Real Time</h2>
     <p class="text-base text-[#535353] mt-4">Stats And Analysis</p>
     <div class="absolute bottom-6 right-6 w-28 h-28">
-      <img src="Images/card2.png" alt="MCQ Icon" class="w-full h-full object-contain">
+      <img src="../Images/card2.png" alt="MCQ Icon" class="w-full h-full object-contain">
     </div>
   </div>
 
@@ -381,7 +272,7 @@
     <h2 class="text-4xl font-bold text-[#0B50B8]">AI Quiz</h2>
     <p class="text-base text-[#535353] mt-4">Make full length papers with just one click.</p>
     <div class="absolute bottom-6 right-6 w-28 h-28">
-      <img src="Images/card3.png" alt="MCQ Icon" class="w-full h-full object-contain">
+      <img src="../Images/card3.png" alt="MCQ Icon" class="w-full h-full object-contain">
     </div>
   </div>
 
@@ -390,7 +281,7 @@
     <h2 class="text-4xl font-bold text-white">Lectures</h2>
     <p class="text-base text-white mt-4">Watch our Lectures for best exam preparation</p>
     <div class="absolute bottom-6 right-6 w-28 h-28">
-      <img src="Images/card4.png" alt="Lectures Icon" class="w-full h-full object-contain">
+      <img src="../Images/card4.png" alt="Lectures Icon" class="w-full h-full object-contain">
     </div>
   </div>
 
@@ -400,7 +291,7 @@
     <p class="text-base text-[#535353] mt-4">Master your concepts with our video lectures</p>
     <div class="flex items-center mt-4">
       <h2 class="text-2xl font-bold text-[#0B50B8]">Coming Soon!</h2>
-      <img src="Images/card5.png" alt="Video Icon" class="w-28 h-28 object-contain ml-2">
+      <img src="../Images/card5.png" alt="Video Icon" class="w-28 h-28 object-contain ml-2">
     </div>
   </div>
 
@@ -409,7 +300,7 @@
     <h2 class="text-4xl font-bold text-blue-700">Flashcards</h2>
     <p class="text-base text-[#535353] mt-4">Explore our Flashcards for the best Revisions</p>
     <div class="absolute bottom-6 right-6 w-28 h-28">
-      <img src="Images/card6.png" alt="Flashcard Icon" class="w-full h-full object-contain">
+      <img src="../Images/card6.png" alt="Flashcard Icon" class="w-full h-full object-contain">
     </div>
   </div>
 
@@ -445,7 +336,7 @@
 
   <!-- Image Column -->
   <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-    <img src="Images/image 33.png" alt="AI Quiz Generator" class="w-[400px] md:w-[480px] max-w-full h-auto">
+    <img src="../Images/image 33.png" alt="AI Quiz Generator" class="w-[400px] md:w-[480px] max-w-full h-auto">
   </div>
 
 </div>
@@ -475,13 +366,13 @@
       <button class="bg-red-600 text-white text-base md:text-lg px-7 py-3 rounded-full hover:bg-red-700 transition">
         Generate FLP
       </button>
-      <img src="Images/image 34.png" alt="App Icon" class="w-[160px] h-auto">
+      <img src="../Images/image 34.png" alt="App Icon" class="w-[160px] h-auto">
     </div>
   </div>
 
   <!-- Right Image -->
   <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-    <img src="Images/image 35.png" alt="Maxify App Screenshot" class="w-[400px] md:w-[480px] max-w-full h-auto">
+    <img src="../Images/image 35.png" alt="Maxify App Screenshot" class="w-[400px] md:w-[480px] max-w-full h-auto">
   </div>
 
 </div>
@@ -510,7 +401,7 @@
 
   <!-- Right Image -->
   <div class="w-full md:w-1/2 flex justify-center md:justify-end">
-    <img src="Images/image 36.png" alt="The Reserve" class="w-[380px] md:w-[440px] max-w-full h-auto">
+    <img src="../Images/image 36.png" alt="The Reserve" class="w-[380px] md:w-[440px] max-w-full h-auto">
   </div>
 
 </div>
@@ -520,12 +411,10 @@
 <section class="w-full px-4 py-16 max-w-[1440px] mx-auto">
   <div class="flex flex-col items-center gap-24">
 
-    <!-- Top Images Row -->
- <!-- Top Images Row -->
 <div class="flex flex-col lg:flex-row items-center justify-center gap-8">
-  <img src="Images/side1.png" alt="Left Image" class="object-cover w-full max-w-[300px]" />
-  <img src="Images/bet1.png" alt="Center Image" class="object-cover w-full max-w-[300px] mt-6 lg:mt-12" />
-  <img src="Images/side2.png" alt="Right Image" class="object-cover w-full max-w-[300px]" />
+  <img src="../Images/side1.png" alt="Left Image" class="object-cover w-full max-w-[300px]" />
+  <img src="../Images/bet1.png" alt="Center Image" class="object-cover w-full max-w-[300px] mt-6 lg:mt-12" />
+  <img src="../Images/side2.png" alt="Right Image" class="object-cover w-full max-w-[300px]" />
 </div>
 
 
@@ -549,11 +438,11 @@
   </button>
 </div>
 
-    <!-- Bottom Images Row -->
+    <!-- Bottom /src/Images Row -->
   <div class="flex flex-col lg:flex-row items-center justify-center gap-8 mt-12">
-  <img src="Images/side3.png" alt="Left Image" class="object-cover w-full max-w-[300px]" />
-  <img src="Images/bet2.png" alt="Center Image" class="object-cover w-full max-w-[300px] mb-6 lg:mb-12" />
-  <img src="Images/side4.png" alt="Right Image" class="object-cover w-full max-w-[300px]" />
+  <img src="../Images/side3.png" alt="Left Image" class="object-cover w-full max-w-[300px]" />
+  <img src="../Images/bet2.png" alt="Center Image" class="object-cover w-full max-w-[300px] mb-6 lg:mb-12" />
+  <img src="../Images/side4.png" alt="Right Image" class="object-cover w-full max-w-[300px]" />
 </div>
 
 
@@ -584,9 +473,9 @@
     <div class="!flex !flex-col !justify-center !items-center">
       <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
-          <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
-        <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
       <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
         <p>Mubashir Iqbal</p>
@@ -599,9 +488,9 @@
      <div class="!flex !flex-col !justify-center !items-center">
       <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
-          <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
-        <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
       <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
         <p>Mubashir Iqbal</p>
@@ -612,9 +501,9 @@
    <div class="!flex !flex-col !justify-center !items-center">
       <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
-          <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
-        <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
       <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
         <p>Mubashir Iqbal</p>
@@ -625,9 +514,9 @@
    <div class="!flex !flex-col !justify-center !items-center">
       <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
-          <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
-        <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
       <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
         <p>Mubashir Iqbal</p>
@@ -638,9 +527,9 @@
    <div class="!flex !flex-col !justify-center !items-center">
       <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
-          <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
-        <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
       <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
         <p>Mubashir Iqbal</p>
@@ -651,9 +540,9 @@
    <div class="!flex !flex-col !justify-center !items-center">
       <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
-          <img src="Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
-        <img src="Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
       <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
         <p>Mubashir Iqbal</p>
@@ -692,7 +581,7 @@
 
   <!-- Image -->
   <div class="max-w-6xl mx-auto">
-    <img src="Images/lastimg.png" alt="Endless Stories" class="w-full h-auto object-contain" />
+    <img src="../Images/lastimg.png" alt="Endless Stories" class="w-full h-auto object-contain" />
   </div>
 
 </section>
@@ -744,30 +633,6 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- Slick Carousel JS -->
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
-  $(document).ready(function(){
-    $('.achiever-slider').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      infinite: true,
-      
-      
-      autoplay: true,
-      autoplaySpeed: 1000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 640,
-          settings: { slidesToShow: 1 }
-        }
-      ]
-    });
-  });
-</script>
-
-</body>
+<script src="js/index.js"></script>
 
 </html>

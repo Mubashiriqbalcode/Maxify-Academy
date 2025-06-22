@@ -6,103 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDCAT Prep Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function showSection(section) {
-            const sections = ['chapterwise-english', 'pastpapers', 'mocktests'];
-            sections.forEach(id => {
-                document.getElementById(id).classList.add('hidden');
-            });
-            document.getElementById(section).classList.remove('hidden');
-        }
-
-        function toggleChapters(subject) {
-            const content = document.getElementById(`chapters-${subject}`);
-            content.classList.toggle("hidden");
-        }
-    </script>
+ 
 </head>
 
 <body class="bg-white font-sans">
     <div class="flex min-h-screen">
         <!-- Sidebar -->
-        <aside class="w-[283px] bg-[#E4E4E4] m-4 rounded-2xl  p-4 space-y-4">
-
-            <div class="flex justify-center ">
-                <img src="Images/maxfylogo.png" alt="" class="w-[77px] h-[77px]">
-            </div>
-
-
-            <nav class="flex flex-col  mt-14 space-y-2">
-
-                <div class="bg-[#673AB7] w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-                    <img src="Images/home-rounded.png" alt="" class=" h-[19px] w-[19px] ">
-                    <a href="Sidebar.html" class=" text-white font-bold px-3 py-2 rounded">Home</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/product.png" alt="" class=" h-[19px] w-[19px] "></a>
-                    <a href="#" class=" font-bold  px-3 py-2 ">Products</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Mdcat.html" class=" font-bold px-3 py-2 ">MDCAT</a>
-                </div>
+        <?php
+// no isHomePage set here
+include '../Includes/Sidebar.php';
+?>
 
 
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
+   
 
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Nums.html" class=" px-3 font-bold py-2 ">NUMS</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/courseicon.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Fsc.html" class=" font-bold px-3 py-2 rounded">F.Sc</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/dashboard4x.png" alt="" class="h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" px-3 py-2 font-bold rounded">Dashborad</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/Vector (1).png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="Pricing.html" class=" px-3 font-bold py-2 rounded">Pricing</a>
-                </div>
-
-                <div class=" w-[249px] h-[46px] flex items-center px-3 rounded-[11px]  ">
-
-                    <a href=""> <img src="Images/about4x.png" alt="" class=" h-[19px] w-[19px] "></a>
-
-                    <a href="#" class=" font-bold px-3 py-2 rounded">About Us</a>
-                </div>
-
-
-
-
-
-            </nav>
-
-
-            <div class="flex justify-around">
-                <button class="bg-[#673AB7] w-[178px] font-bold py-2 px-4 rounded-3xl text-white">Get
-                    Started</button>
-            </div>
-
-
-
-        </aside>
 
         <!-- Main Content -->
         <main class="flex-1 p-8">
@@ -127,7 +44,7 @@ F.SC Practice Zone is your one-stop platform for comprehensive F.SC preparation.
                 <div onclick="toggleChapters('english')"
                     class="cursor-pointer flex items-center justify-between bg-gray-200 rounded-2xl px-6 py-4 shadow mb-4">
                     <div class="flex items-center gap-4">
-                        <img src="Images/english.png" alt="English" class="w-12 h-12">
+                        <img src="../Images/english.png" alt="English" class="w-12 h-12">
                         <p class="text-xl font-semibold text-purple-700">English</p>
                     </div>
                     <span class="text-purple-700 font-semibold">Chapters ▼</span>
@@ -135,14 +52,14 @@ F.SC Practice Zone is your one-stop platform for comprehensive F.SC preparation.
                 <div id="chapters-english" class="hidden mb-4 space-y-2">
                     <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl shadow">
                         <div class="flex items-center gap-3">
-                            <img src="Images/chap1.png" alt="Chapter Icon" class="w-8 h-8">
+                            <img src="../Images/chap1.png" alt="Chapter Icon" class="w-8 h-8">
                             <span class="font-medium">Ch 1: Grammar</span>
                         </div>
                         <button class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm">Open</button>
                     </div>
                     <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl shadow">
                         <div class="flex items-center gap-3">
-                            <img src="Images/chap2.png" alt="Chapter Icon" class="w-8 h-8">
+                            <img src="../Images/chap2.png" alt="Chapter Icon" class="w-8 h-8">
                             <span class="font-medium">Ch 2: Vocabulary</span>
                         </div>
                         <button class="bg-purple-600 text-white px-4 py-1 rounded-full text-sm">Open</button>
@@ -162,7 +79,7 @@ F.SC Practice Zone is your one-stop platform for comprehensive F.SC preparation.
                 <div onclick="toggleChapters('pastpapers')"
                     class="cursor-pointer flex items-center justify-between bg-gray-200 rounded-2xl px-6 py-4 shadow mb-4">
                     <div class="flex items-center gap-4">
-                        <img src="Images/maxfylogo.png" alt="Past Papers" class="w-12 h-12">
+                        <img src="../Images/maxfylogo.png" alt="Past Papers" class="w-12 h-12">
                         <p class="text-xl font-semibold text-purple-700">Past Papers</p>
                     </div>
                     <span class="text-purple-700 font-semibold">Years ▼</span>
@@ -183,7 +100,7 @@ F.SC Practice Zone is your one-stop platform for comprehensive F.SC preparation.
                 <div onclick="toggleChapters('mock')"
                     class="cursor-pointer flex items-center justify-between bg-gray-200 rounded-2xl px-6 py-4 shadow mb-4">
                     <div class="flex items-center gap-4">
-                        <img src="Images/maxfylogo.png" alt="Mock Test" class="w-12 h-12">
+                        <img src="../Images/maxfylogo.png" alt="Mock Test" class="w-12 h-12">
                         <p class="text-xl font-semibold text-purple-700">Mock Test</p>
                     </div>
                     <span class="text-purple-700 font-semibold">Tests ▼</span>
@@ -202,6 +119,9 @@ F.SC Practice Zone is your one-stop platform for comprehensive F.SC preparation.
 
         </main>
     </div>
+    
+
+<script src="js/Exmination.js"></script>
 </body>
 
 </html>
