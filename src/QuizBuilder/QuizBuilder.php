@@ -9,6 +9,7 @@
 </head>
 
 <body class="bg-white text-[#3F3F3F] font-sans">
+  
   <div class="min-h-screen w-full max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-6">
 
     <?php
