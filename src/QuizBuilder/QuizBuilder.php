@@ -9,13 +9,43 @@
 </head>
 
 <body class="bg-white text-[#3F3F3F] font-sans">
-  
+  <header class="lg:hidden flex justify-between items-center px-4 py-3 bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <!-- Sidebar Toggle Button -->
+  <button onclick="toggleSidebar()" class="w-[21px] h-[21px]">
+    <img src="../Images/quill_hamburger.png" alt="Menu Icon" class="w-full h-full object-contain" />
+  </button>
+
+  <!-- Centered Logo -->
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
+  </div>
+</header>
   <div class="min-h-screen w-full max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-6">
 
-    <?php
-// no isHomePage set here
-include '../Includes/Sidebar.php';
-?>
+    <!-- SIDEBAR -->
+<aside
+  id="mobileSidebar"
+  class="fixed lg:static lg:translate-x-0 top-0 left-0 h-full lg:h-auto w-[250px] lg:w-full bg-[#E4E4E4] shadow-lg 
+         z-60 transform -translate-x-full lg:transform-none transition-transform duration-300">
+  
+  <!-- Close Button (Visible on Mobile Only) -->
+  <div class="flex justify-end p-3 lg:hidden">
+    <button onclick="toggleSidebar()" class="text-[#673AB7] font-bold text-xl">
+      ✕
+    </button>
+  </div>
+
+  <?php
+    $isHomePage = true;
+    include '../Includes/Sidebar.php';
+  ?>
+</aside>
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById('mobileSidebar');
+    sidebar.classList.toggle('-translate-x-full');
+  }
+</script>
 
 
     <!-- ✅ Main Content (Fully Adjusted) -->

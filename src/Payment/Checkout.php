@@ -14,7 +14,18 @@
     }
   </style>
 </head>
+<!-- MOBILE HEADER -->
+<header class="lg:hidden flex justify-between items-center px-4 py-3 bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <!-- Sidebar Toggle Button -->
+  <button onclick="toggleSidebar()" class="w-[21px] h-[21px]">
+    <img src="../Images/quill_hamburger.png" alt="Menu Icon" class="w-full h-full object-contain" />
+  </button>
 
+  <!-- Centered Logo -->
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
+  </div>
+</header>
 <body class="bg-gray-100">
 
   <div class="flex flex-col lg:flex-row min-h-screen p-3">

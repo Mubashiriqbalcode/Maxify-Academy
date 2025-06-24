@@ -227,28 +227,35 @@
   updateTimer(); // Initial call
 
 //   .................................
-//  Slick Carousel JS 
- $(document).ready(function(){
-    $('.achiever-slider').slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      infinite: true,
-      
-      
-      autoplay: true,
-      autoplaySpeed: 1000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 2 }
-        },
-        {
-          breakpoint: 640,
-          settings: { slidesToShow: 1 }
+ $(document).ready(function () {
+  $('.achiever-slider').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    responsive: [
+      {
+        breakpoint: 1024, // tablet
+        settings: {
+          slidesToShow: 2
         }
-      ]
-    });
+      },
+      {
+        breakpoint: 768, // large mobile
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480, // small mobile
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   });
+});
 
 
 

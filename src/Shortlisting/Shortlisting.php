@@ -14,6 +14,7 @@
     }
   </style>
 </head>
+
 <body class="bg-white min-h-screen flex items-start justify-center gap-10 p-6 relative">
 
   <!-- Sidebar -->

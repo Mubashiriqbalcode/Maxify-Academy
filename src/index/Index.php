@@ -12,7 +12,16 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
  <link rel="stylesheet" href="css/index.css">
 <style>
-   
+    .card-active {
+      color: white !important;
+      background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%) !important;
+      box-shadow: 15px 25px 250px 0px #00000040 !important;
+    }
+    .card-active h2,
+    .card-active p,
+    .card-active h3 {
+      color: white !important;
+    }
 </style>
 
 </head>
@@ -117,27 +126,43 @@
         </div>
 
         <!-- Discount Timer -->
-        <section class="my-10">
-          <h2 class="text-[#673AB7] text-3xl font-bold mb-6 font-[Manrope]">Discount Ends In</h2>
-          <div class="flex flex-wrap gap-6 items-center justify-start">
-            <!-- Circular Timer -->
-            <div class="flex justify-center items-center w-44 h-44 rounded-full animate-pulse transition duration-300"
-                 style="background: linear-gradient(180deg, #E1E1E1 0%, #FFFFFF 100%);
-                 box-shadow: 0px 40.27px 80.53px 0px #3333332A,
-                 inset 0px 10.65px 10.65px 0px #FFFFFF,
-                 inset 0px -10.65px 10.65px 0px #D9D9D9;">
-              <h3 id="timer" class="text-[#673AB7] text-2xl font-bold font-[Manrope]">00:00:00</h3>
-            </div>
+<section class="my-10 font-[Manrope]">
+  <!-- Heading -->
+  <h2 class="text-[#673AB7] font-bold mb-6 leading-[41px] text-[18px] lg:text-3xl">
+    Discount Ends In
+  </h2>
 
-            <div class="space-y-4 text-center">
-              <button class="w-[178px] h-[42px] rounded-[30px] bg-gradient-to-b from-[#673AB7] to-[#2E1A51]
-                text-white font-[Manrope] font-semibold text-[15px] leading-[22px] transition duration-300 hover:opacity-90">
-                Avail Now
-              </button>
-              <p class="font-bold text-sm font-[Manrope]">Join Our Guidance Community</p>
-            </div>
-          </div>
-        </section>
+  <!-- Flex Layout (Always Row) -->
+  <div class="flex items-center justify-start gap-4 flex-nowrap">
+
+    <!-- Timer -->
+    <div class="flex-shrink-0 flex justify-center items-center w-[124px] h-[124px] md:w-36 md:h-36 lg:w-44 lg:h-44 rounded-full animate-pulse transition duration-300"
+      style="background: linear-gradient(180deg, #E1E1E1 0%, #FFFFFF 100%);
+             box-shadow: 0px 40.27px 80.53px 0px #3333332A,
+                         inset 0px 10.65px 10.65px 0px #FFFFFF,
+                         inset 0px -10.65px 10.65px 0px #D9D9D9;">
+      <h3 id="timer" class="text-[#673AB7] font-bold leading-none text-[16px] md:text-xl lg:text-2xl">
+        00:00:00
+      </h3>
+    </div>
+
+    <!-- Button + Text -->
+    <div class="space-y-2 text-left">
+      <button class="rounded-[30px] transition hover:opacity-90
+        text-white font-semibold leading-[22px] text-[12px] md:text-[15px]
+        w-[100px] h-[29px] md:w-[178px] md:h-[42px]
+        px-[19px] py-[8px] md:px-[39px] md:py-[12px]"
+        style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%)">
+        Avail Now
+      </button>
+      <p class="font-semibold text-[6px] md:text-sm leading-[22px] text-black">
+        Join Our Guidance Community
+      </p>
+    </div>
+
+  </div>
+</section>
+
       </section>
 
       <!-- RIGHT SECTION (Achievers) -->
@@ -278,95 +303,78 @@
 
 
 <!-- Desktop layout: lg and above -->
-<div class="hidden lg:flex flex-wrap justify-center items-start gap-6 max-w-[1200px] mx-auto mt-16 p-4 font-[Manrope]">
- 
-  <!-- Template Card -->
-  <div class="bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] rounded-[10px] p-4 w-[260px] sm:w-[280px] lg:w-[300px] h-[400px] relative">
-    <h2 class="text-transparent text-[24px] sm:text-[28px] md:text-[32px] leading-[32px] font-bold bg-clip-text"
-        style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">
-      70,000+
-    </h2>
-    <p class="text-[#535353] text-[16px] md:text-[18px] leading-[28px] font-medium mt-3">
-      MCQ’s with Detailed Explanation
-    </p>
-    <p class="text-[#535353] text-[16px] md:text-[18px] leading-[28px] font-medium mt-1">
-      On your One click Away
-    </p>
-    <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
-      <img src="../Images/card1.png" alt="MCQ Icon" class="w-full h-full object-contain">
+ <div class="hidden lg:flex flex-wrap justify-center items-start gap-6 max-w-[1240px] mx-auto mt-16 px-4">
+
+
+    <!-- Card Template Start -->
+    <div onclick="activateCard(this)" class="card bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer rounded-[10px] p-4 w-[300px] h-[400px] relative">
+      <h2 class="text-transparent text-[28px] font-bold leading-[32px] bg-clip-text bg-gradient-to-b from-[#0B50B8] to-[#052452]">70,000+</h2>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-3">MCQ’s with Detailed Explanation</p>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-1">On your One click Away</p>
+      <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
+        <img src="../Images/card1.png" alt="MCQ Icon" class="w-full h-full object-contain">
+      </div>
     </div>
+
+    <div onclick="activateCard(this)" class="card bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer rounded-[10px] p-4 w-[300px] h-[400px] relative">
+      <h2 class="text-transparent text-[28px] font-bold leading-[32px] bg-clip-text bg-gradient-to-b from-[#0B50B8] to-[#052452]">Real Time</h2>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-3">Stats And Analysis</p>
+      <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
+        <img src="../Images/card2.png" alt="Stats Icon" class="w-full h-full object-contain">
+      </div>
+    </div>
+
+    <div onclick="activateCard(this)" class="card bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer rounded-[10px] p-4 w-[300px] h-[400px] relative">
+      <h2 class="text-transparent text-[28px] font-bold leading-[32px] bg-clip-text bg-gradient-to-b from-[#0B50B8] to-[#052452]">AI Quiz</h2>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-3">Make full length papers with just one click.</p>
+      <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
+        <img src="../Images/card3.png" alt="AI Icon" class="w-full h-full object-contain">
+      </div>
+    </div>
+
+    <div onclick="activateCard(this)" class="card bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer rounded-[10px] p-4 w-[300px] h-[400px] relative">
+      <h2 class="text-[28px] font-bold leading-[32px] text-[#0B50B8]">Lectures</h2>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-3">Watch our Lectures for best exam preparation</p>
+      <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
+        <img src="../Images/card4.png" alt="Lectures Icon" class="w-full h-full object-contain">
+      </div>
+    </div>
+
+    <div onclick="activateCard(this)" class="card bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer rounded-[10px] p-4 w-[300px] h-[400px] relative">
+      <h2 class="text-transparent text-[28px] font-bold leading-[32px] bg-clip-text bg-gradient-to-b from-[#0B50B8] to-[#052452]">Video Solutions</h2>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-3">Master your concepts with our video lectures</p>
+      <div class="flex items-center mt-3">
+        <h3 class="text-[18px] font-bold text-[#0B50B8]">Coming Soon!</h3>
+        <img src="../Images/card5.png" alt="Video Icon" class="w-[70px] h-[70px] object-contain ml-2">
+      </div>
+    </div>
+
+    <div onclick="activateCard(this)" class="card bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer rounded-[10px] p-4 w-[300px] h-[400px] relative">
+      <h2 class="text-transparent text-[28px] font-bold leading-[32px] bg-clip-text bg-gradient-to-b from-[#0B50B8] to-[#052452]">Flashcards</h2>
+      <p class="text-[#535353] text-[18px] font-medium leading-[28px] mt-3">Explore our Flashcards for the best Revisions</p>
+      <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
+        <img src="../Images/card6.png" alt="Flashcard Icon" class="w-full h-full object-contain">
+      </div>
+    </div>
+    <!-- Card Template End -->
+
   </div>
 
-  <div class="bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] rounded-[10px] p-4 w-[260px] sm:w-[280px] lg:w-[300px] h-[400px] relative">
-    <h2 class="text-transparent text-[24px] sm:text-[28px] md:text-[32px] leading-[32px] font-bold bg-clip-text"
-        style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">
-      Real Time
-    </h2>
-    <p class="text-[#535353] text-[16px] md:text-[18px] leading-[28px] font-medium mt-3">
-      Stats And Analysis
-    </p>
-    <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
-      <img src="../Images/card2.png" alt="Stats Icon" class="w-full h-full object-contain">
-    </div>
-  </div>
-
-  <div class="bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] rounded-[10px] p-4 w-[260px] sm:w-[280px] lg:w-[300px] h-[400px] relative">
-    <h2 class="text-transparent text-[24px] sm:text-[28px] md:text-[32px] leading-[32px] font-bold bg-clip-text"
-        style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">
-      AI Quiz
-    </h2>
-    <p class="text-[#535353] text-[16px] md:text-[18px] leading-[28px] font-medium mt-3">
-      Make full length papers with just one click.
-    </p>
-    <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
-      <img src="../Images/card3.png" alt="AI Icon" class="w-full h-full object-contain">
-    </div>
-  </div>
-
-  <div class="bg-gradient-to-b from-[#673AB7] to-[#2E1A51] shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] rounded-[10px] p-4 w-[260px] sm:w-[280px] lg:w-[300px] h-[400px] relative">
-    <h2 class="text-white text-[24px] sm:text-[28px] md:text-[32px] leading-[32px] font-bold">Lectures</h2>
-    <p class="text-white text-[16px] md:text-[18px] leading-[28px] font-medium mt-3">
-      Watch our Lectures for best exam preparation
-    </p>
-    <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
-      <img src="../Images/card4.png" alt="Lectures Icon" class="w-full h-full object-contain">
-    </div>
-  </div>
-
-  <div class="bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] rounded-[10px] p-4 w-[260px] sm:w-[280px] lg:w-[300px] h-[400px] relative">
-    <h2 class="text-transparent text-[22px] sm:text-[26px] md:text-[30px] leading-[32px] font-bold bg-clip-text"
-        style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">
-      Video Solutions
-    </h2>
-    <p class="text-[#535353] text-[16px] md:text-[18px] leading-[28px] font-medium mt-3">
-      Master your concepts with our video lectures
-    </p>
-    <div class="flex items-center mt-3">
-      <h3 class="text-[14px] md:text-[18px] font-bold text-[#0B50B8]">Coming Soon!</h3>
-      <img src="../Images/card5.png" alt="Video Icon" class="w-[70px] h-[70px] object-contain ml-2">
-    </div>
-  </div>
-
-  <div class="bg-white shadow-[10px_15px_100px_6px_rgba(0,0,0,0.15)] rounded-[10px] p-4 w-[260px] sm:w-[280px] lg:w-[300px] h-[400px] relative">
-    <h2 class="text-transparent text-[24px] sm:text-[28px] md:text-[32px] leading-[32px] font-bold bg-clip-text"
-        style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">
-      Flashcards
-    </h2>
-    <p class="text-[#535353] text-[16px] md:text-[18px] leading-[28px] font-medium mt-3">
-      Explore our Flashcards for the best Revisions
-    </p>
-    <div class="absolute bottom-4 right-4 w-[90px] h-[90px]">
-      <img src="../Images/card6.png" alt="Flashcard Icon" class="w-full h-full object-contain">
-    </div>
-  </div>
-</div>
+  <script>
+    function activateCard(card) {
+      document.querySelectorAll('.card').forEach(c => {
+        c.classList.remove('card-active');
+      });
+      card.classList.add('card-active');
+    }
+  </script>
 <!-- MOBILE LAYOUT ONLY -->
 <div class="block lg:hidden max-w-[600px] mx-auto mt-12 p-4 font-[Manrope]">
-  <div class="grid grid-cols-2 gap-4">
+  <div class="grid grid-cols-2  gap-x-4 justify-items-center">
 
-    <!-- LEFT Card 1 -->
-    <div class="bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[15px_25px_250px_12px_#00000040] mt-0">
-      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[34px]"
+    <!-- Card Template Start -->
+    <div onclick="activateMobileCard(this)" class="mobile-card bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[10px_10px_80px_6px_#00000020]">
+      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[28px]"
         style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">70,000+</h2>
       <p class="text-[#535353] font-medium text-[10px] leading-[16px] mt-1">MCQ’s with Detailed Explanation</p>
       <p class="text-[#535353] font-medium text-[10px] leading-[16px]">On your One click Away</p>
@@ -375,9 +383,8 @@
       </div>
     </div>
 
-    <!-- RIGHT Card 1 -->
-    <div class="mt-[20px] bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[15px_25px_250px_12px_#00000040]">
-      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[34px]"
+    <div onclick="activateMobileCard(this)" class="mobile-card mt-12 bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[10px_10px_80px_6px_#00000020]">
+      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[28px]"
         style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">Real Time</h2>
       <p class="text-[#535353] font-medium text-[10px] leading-[16px] mt-1">Stats And Analysis</p>
       <div class="absolute bottom-2 right-2 w-[38px] h-[38px]">
@@ -385,9 +392,8 @@
       </div>
     </div>
 
-    <!-- LEFT Card 2 (FIXED: no more overlap) -->
-    <div class="mt-[0px] bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[15px_25px_250px_12px_#00000040]">
-      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[34px]"
+    <div onclick="activateMobileCard(this)" class="  mobile-card bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[10px_10px_80px_6px_#00000020]">
+      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[28px]"
         style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">AI Quiz</h2>
       <p class="text-[#535353] font-medium text-[10px] leading-[16px] mt-1">Make full length papers with just one click.</p>
       <div class="absolute bottom-2 left-2 w-[38px] h-[38px]">
@@ -395,18 +401,16 @@
       </div>
     </div>
 
-    <!-- RIGHT Card 2 -->
-    <div class="mt-[40px] bg-gradient-to-b from-[#673AB7] to-[#2E1A51] text-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[15px_25px_250px_12px_#00000040]">
-      <h2 class="font-bold text-[18px] leading-[34px]">Lectures</h2>
+    <div onclick="activateMobileCard(this)" class="mobile-card mt-12 bg-gradient-to-b from-[#673AB7] to-[#2E1A51] text-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[10px_10px_80px_6px_#00000020]">
+      <h2 class="font-bold text-[18px] leading-[28px]">Lectures</h2>
       <p class="font-medium text-[10px] leading-[16px] mt-1">Watch our Lectures for best exam preparation</p>
       <div class="absolute bottom-2 right-2 w-[38px] h-[38px]">
         <img src="../Images/card4.png" alt="Lectures Icon" class="w-full h-full object-contain">
       </div>
     </div>
 
-    <!-- LEFT Card 3 -->
-    <div class="mt-[-20px] bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[15px_25px_250px_12px_#00000040]">
-      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[34px]"
+    <div onclick="activateMobileCard(this)" class="mobile-card bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[10px_10px_80px_6px_#00000020]">
+      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[28px]"
         style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">Video Solutions</h2>
       <p class="text-[#535353] font-medium text-[10px] leading-[16px] mt-1">Master your concepts with our video lectures</p>
       <div class="absolute bottom-2 left-2 w-[38px] h-[38px]">
@@ -414,18 +418,43 @@
       </div>
     </div>
 
-    <!-- RIGHT Card 3 -->
-    <div class="mt-[40px] bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[15px_25px_250px_12px_#00000040]">
-      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[34px]"
+    <div onclick="activateMobileCard(this)" class="mobile-card mt-12 bg-white rounded-[10px] p-4 w-[160px] h-[150px] relative shadow-[10px_10px_80px_6px_#00000020]">
+      <h2 class="text-transparent bg-clip-text font-bold text-[18px] leading-[28px]"
         style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">Flashcards</h2>
       <p class="text-[#535353] font-medium text-[10px] leading-[16px] mt-1">Explore our Flashcards for the best Revisions</p>
       <div class="absolute bottom-2 right-2 w-[38px] h-[38px]">
         <img src="../Images/card6.png" alt="Flashcard Icon" class="w-full h-full object-contain">
       </div>
     </div>
+    <!-- Card Template End -->
 
   </div>
 </div>
+
+<script>
+  function activateMobileCard(card) {
+    document.querySelectorAll('.mobile-card').forEach(c => {
+      c.classList.remove('bg-gradient-to-b', 'from-[#673AB7]', 'to-[#2E1A51]', 'text-white');
+      c.querySelectorAll('h2, p').forEach(el => {
+        el.classList.remove('text-white');
+        if (el.tagName === 'H2') {
+          el.classList.add('text-transparent', 'bg-clip-text');
+          el.style.backgroundImage = 'linear-gradient(180deg, #0B50B8 0%, #052452 100%)';
+        }
+      });
+    });
+
+    card.classList.add('bg-gradient-to-b', 'from-[#673AB7]', 'to-[#2E1A51]', 'text-white');
+    card.querySelectorAll('h2, p').forEach(el => {
+      el.classList.add('text-white');
+      if (el.tagName === 'H2') {
+        el.classList.remove('text-transparent', 'bg-clip-text');
+        el.style.backgroundImage = 'none';
+      }
+    });
+  }
+</script>
+
 
 
 
@@ -476,22 +505,22 @@
 </div>
 <!-- Mobile and Tablet Only -->
 
-<div class="flex lg:hidden flex-row items-center justify-between gap-4 py-8 max-w-screen-lg mx-auto">
+<div class="flex flex-row items-center justify-start gap-4 py-8 max-w-screen-lg mx-auto px-1 lg:hidden">
 
   <!-- Text Column -->
   <div class="w-1/2 text-left space-y-3">
-    <!-- The New Revolution -->
-    <h2 class="font-[600] text-[16px] leading-[20px] text-[#535353] font-[Manrope]">
+    <!-- Headline -->
+    <h2 class="font-semibold text-[16px] leading-[20px] text-[#535353] font-[Manrope]">
       The New Revolution<br>is Here
     </h2>
 
-    <!-- AI Quiz Generator -->
-    <h1 class="font-[700] text-[26px] leading-[30px] text-transparent bg-clip-text font-[Manrope]"
+    <!-- Title -->
+    <h1 class="font-bold text-[26px] leading-[30px] text-transparent bg-clip-text font-[Manrope]"
         style="background-image: linear-gradient(180deg, #0B50B8 0%, #052452 100%)">
       AI Quiz<br>Generator
     </h1>
 
-    <!-- Sub Text -->
+    <!-- Subtext -->
     <p class="text-[15px] font-medium text-[#535353] font-[Manrope]">
       Less Practice. Best Results
     </p>
@@ -499,14 +528,14 @@
     <!-- Buttons -->
     <div class="flex flex-wrap justify-start gap-2 pt-3">
       <!-- Button 1 -->
-      <button class="text-white text-[11px] leading-[22px] font-semibold rounded-[30px] font-[Manrope]"
-              style="width: 108px; height: 30px; background: linear-gradient(180deg, #FF0000 0%, #990000 100%)">
+      <button class="text-white text-[11px] leading-[22px] font-semibold rounded-[30px] font-[Manrope] w-[108px] h-[30px]"
+              style="background: linear-gradient(180deg, #FF0000 0%, #990000 100%)">
         Generate FLP
       </button>
 
       <!-- Button 2 -->
-      <button class="text-white text-[11px] leading-[22px] font-semibold rounded-[30px] font-[Manrope]"
-              style="width: 108px; height: 30px; background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%)">
+      <button class="text-white text-[11px] leading-[22px] font-semibold rounded-[30px] font-[Manrope] w-[108px] h-[30px]"
+              style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%)">
         Go to Quiz Builder
       </button>
     </div>
@@ -515,7 +544,7 @@
   <!-- Image Column -->
   <div class="w-1/2 flex justify-center">
     <img src="../Images/image 33.png" alt="AI Quiz Generator"
-         class="w-[135px] h-[165px] rounded-[12px] object-contain">
+         class="w-[120px] h-[150px] rounded-[12px] object-contain">
   </div>
 
 </div>
@@ -524,7 +553,7 @@
 
 
 <!-- .......................................................... -->
-<div class="grid grid-cols-2 items-start gap-4 px-4 py-6 bg-white max-w-screen-xl mx-auto lg:hidden">
+<div class="grid grid-cols-2 items-start gap-4 px-2 py-4 bg-white max-w-screen-xl mx-auto lg:hidden">
 
   <!-- Left Content -->
   <div class="text-left space-y-3">
@@ -602,51 +631,46 @@
 <!-- ......................................................................... -->
 
 <!-- 🔹 Desktop View Only -->
-<div class="hidden lg:grid grid-cols-2 items-center gap-6 px-4 lg:px-20 py-10 bg-white max-w-screen-xl mx-auto">
-  
+<div class="hidden lg:flex flex-col lg:flex-row items-center justify-between gap-6 px-4 md:px-10 lg:px-20 py-10 bg-white max-w-screen-xl mx-auto">
   <!-- Left Content -->
-  <div class="text-left space-y-4">
-    <h1 class="text-[60px] font-bold text-blue-800 leading-tight font-[Manrope]">
+  <div class="w-full lg:w-1/2 text-left space-y-4">
+    <h1 class="text-[32px] md:text-[48px] lg:text-[60px] font-bold text-blue-800 leading-tight font-[Manrope]">
       The Reserve
     </h1>
 
-    <p class="text-[24px] font-medium text-[#535353] font-[Manrope]">
+    <p class="text-[16px] md:text-[20px] lg:text-[24px] font-medium text-[#535353] font-[Manrope]">
       Everything a Student Needs in One Place
     </p>
 
-    <button class="text-white font-[600] text-[15px] leading-[22px] rounded-[30px] font-[Manrope] px-[30px] py-[10px]"
-            style="background: linear-gradient(180deg, #FF0000 0%, #990000 100%); height: 42px;">
+    <button class="text-white font-semibold text-[13px] md:text-[14px] lg:text-[15px] leading-[22px] rounded-full font-[Manrope] px-6 py-2"
+            style="background: linear-gradient(180deg, #FF0000 0%, #990000 100%)">
       Unlock The Vault
     </button>
   </div>
 
   <!-- Right Image -->
-  <div class="flex justify-end items-center">
+  <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-6 lg:mt-0">
     <img src="../Images/image 36.png" alt="The Reserve"
-         class="w-[500px] h-auto object-contain">
+         class="w-[280px] md:w-[400px] lg:w-[500px] h-auto object-contain">
   </div>
 </div>
 
 
 <!-- 🔹 Mobile View Only -->
 <div class="block lg:hidden px-5 py-12 bg-white max-w-screen-xl mx-auto">
-  <div class="flex flex-row items-center justify-between gap-5">
-
+  <div class="flex flex-row items-center justify-between gap-4">
     <!-- Left Content -->
     <div class="w-1/2 space-y-3">
-      <!-- Heading -->
       <h1 class="text-[22px] font-bold text-blue-800 leading-tight font-[Manrope]">
         The Reserve
       </h1>
 
-      <!-- Subtitle -->
       <p class="text-[13px] font-medium text-[#535353] font-[Manrope] leading-[18px]">
         Everything a Student Needs in One Place
       </p>
 
-      <!-- Button -->
-      <button class="text-white font-[600] text-[10px] leading-[22px] rounded-[30px] font-[Manrope] px-[20px] py-[4px]"
-              style="background: linear-gradient(180deg, #FF0000 0%, #990000 100%); ;">
+      <button class="text-white font-semibold text-[10px] leading-[22px] rounded-[30px] font-[Manrope] px-[20px] py-[4px]"
+              style="background: linear-gradient(180deg, #FF0000 0%, #990000 100%)">
         Unlock The Vault
       </button>
     </div>
@@ -654,49 +678,61 @@
     <!-- Right Image -->
     <div class="w-1/2 flex justify-end">
       <img src="../Images/image 36.png" alt="The Reserve"
-           class="w-[160px] h-auto object-contain">
+           class="w-[140px] sm:w-[160px] h-auto object-contain">
     </div>
-
   </div>
 </div>
 
 <section class="w-full px-4 py-16 max-w-[1440px] mx-auto">
   <div class="flex flex-col items-center gap-24">
 
-<div class="flex flex-col lg:flex-row items-center justify-center gap-8">
-  <img src="../Images/side1.png" alt="Left Image" class="object-cover w-full max-w-[300px]" />
-  <img src="../Images/bet1.png" alt="Center Image" class="object-cover w-full max-w-[300px] mt-6 lg:mt-12" />
-  <img src="../Images/side2.png" alt="Right Image" class="object-cover w-full max-w-[300px]" />
-</div>
-
+    <!-- Top Images Row (V shape) -->
+    <div class="flex flex-col lg:flex-row justify-center gap-8 mt-4">
+      <img src="../Images/side1.png" alt="Left Image"
+        class="object-cover w-full max-w-[300px] self-start" />
+      <img src="../Images/bet1.png" alt="Center Image"
+        class="object-cover w-full max-w-[300px] self-center mt-6 lg:mt-12" />
+      <img src="../Images/side2.png" alt="Right Image"
+        class="object-cover w-full max-w-[300px] self-start" />
+    </div>
 
     <!-- Text Content -->
-   <div class="w-full md:w-2/3 lg:w-1/2 text-center space-y-5 mt-12">
-  <!-- Top Small Heading -->
-  <p class="text-gray-600 text-2xl lg:text-3xl font-bold">Our Journey</p>
+  <div class="w-full md:w-2/3 lg:w-1/2 text-left space-y-5 mt-10 font-[Manrope]">
+
+  <!-- Subheading -->
+  <p class="text-[#535353] font-semibold text-[18px] md:text-[26px] lg:text-[34px] leading-[28px] md:leading-[34px] lg:leading-[40px]">
+    Our Journey
+  </p>
 
   <!-- Main Heading -->
-  <h1 class="text-3xl lg:text-5xl font-semibold text-blue-800">Our Path to Maxify</h1>
+  <h1 class="font-bold text-[24px] md:text-[38px] lg:text-[50px] leading-[34px] md:leading-[48px] lg:leading-[60px]
+             bg-gradient-to-b from-[#0B50B8] to-[#052452] text-transparent bg-clip-text">
+    Our Path to Maxify
+  </h1>
 
-  <!-- Subheading Paragraph -->
-  <p class="text-gray-700 font-medium text-lg lg:text-2xl leading-relaxed">
-    Explore Maxify Journey:<br />
-    The Pioneer of Pakistan’s Ed-Tech Revolution
+  <!-- Paragraph -->
+  <p class="text-[#535353] font-semibold text-[14px] md:text-[22px] lg:text-[30px] leading-[22px] md:leading-[34px] lg:leading-[44px]">
+    Explore Maxify Journey: The Pioneer of Pakistan’s Ed-Tech Revolution
   </p>
 
   <!-- Button -->
-  <button class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full text-base transition">
+  <button
+    class="text-white font-semibold text-[13px] leading-[20px] rounded-[30px] transition hover:brightness-110"
+    style="width: 150px; height: 36px; padding: 10px 28px; background: linear-gradient(180deg, #FF0000 0%, #990000 100%);">
     Follow the Dream
   </button>
 </div>
 
-    <!-- Bottom /src/Images Row -->
-  <div class="flex flex-col lg:flex-row items-center justify-center gap-8 mt-12">
-  <img src="../Images/side3.png" alt="Left Image" class="object-cover w-full max-w-[300px]" />
-  <img src="../Images/bet2.png" alt="Center Image" class="object-cover w-full max-w-[300px] mb-6 lg:mb-12" />
-  <img src="../Images/side4.png" alt="Right Image" class="object-cover w-full max-w-[300px]" />
-</div>
 
+    <!-- Bottom Images Row (∧ shape) -->
+    <div class="flex flex-col lg:flex-row justify-center gap-8 mt-12">
+      <img src="../Images/side3.png" alt="Left Image"
+        class="object-cover w-full max-w-[300px] self-end" />
+      <img src="../Images/bet2.png" alt="Center Image"
+        class="object-cover w-full max-w-[300px] self-center mb-6 lg:mb-12" />
+      <img src="../Images/side4.png" alt="Right Image"
+        class="object-cover w-full max-w-[300px] self-end" />
+    </div>
 
   </div>
 </section>
@@ -704,135 +740,223 @@
 
 <!-- ............................ -->
 
-<section class="w-full px-4 mt-10 space-y-6 max-w-[1440px] mx-auto text-center">
-  <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-900">
+<section class="w-full px-4 mt-6 space-y-4 max-w-[1440px] mx-auto text-center font-[Manrope]">
+  <!-- Gradient Heading -->
+  <h2 class="text-[28px] md:text-[40px] lg:text-[46px] font-extrabold leading-[52px] bg-gradient-to-b from-[#0B50B8] to-[#052452] text-transparent bg-clip-text">
     Meet Our High Achievers
   </h2>
-  <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-[#535353]">
+
+  <!-- Subheading -->
+  <p class="text-[18px] md:text-[28px] lg:text-[30px] font-semibold leading-[38px] text-[#535353]">
     The Driving Force Behind Maxify
   </p>
 </section>
 
 <!-- ..................................... -->
 
-<section class="w-full px-4 mt-10 max-w-[1440px] mx-auto">
-  <h1 class="text-[#673AB7] text-3xl md:text-4xl mb-8 font-bold text-center">Our High Achievers</h1>
+<section class="w-full px-4 mt-10 max-w-[1440px] mx-auto font-[Manrope]">
+  <!-- Section Heading -->
 
-  <!-- Slick Slider Wrapper -->
-  <div class="achiever-slider">
-    
-    <!-- Card -->
-    <div class="!flex !flex-col !justify-center !items-center">
-      <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
-        <div class="absolute -top-3 -right-3 z-10">
-          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
-        </div>
-        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
-      </div>
-      <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
-        <p>Mubashir Iqbal</p>
-        <p>200/200</p>
-        <p>MDCAT</p>
-      </div>
-    </div>
 
-    <!-- Duplicate the above card as needed -->
-     <div class="!flex !flex-col !justify-center !items-center">
-      <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
+  <!-- Achiever Slider -->
+  <div class="achiever-slider flex gap-6 ">
+
+    <!-- Card Start -->
+    <div class="!flex !flex-col !justify-center !items-center flex-shrink-0">
+      
+      <!-- Individual Card Title -->
+      <h2 class="text-[#673AB7] text-[18px] md:text-xl font-bold mb-2 text-center">
+         Our High Achievers
+      </h2>
+
+      <!-- Image Card -->
+      <div class="relative border-2 rounded-xl flex justify-center items-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
         <div class="absolute -top-3 -right-3 z-10">
           <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
         </div>
         <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
       </div>
-      <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
-        <p>Mubashir Iqbal</p>
-        <p>200/200</p>
-        <p>MDCAT</p>
-      </div>
-    </div>
-   <div class="!flex !flex-col !justify-center !items-center">
-      <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
-        <div class="absolute -top-3 -right-3 z-10">
-          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
-        </div>
-        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
-      </div>
-      <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
-        <p>Mubashir Iqbal</p>
-        <p>200/200</p>
-        <p>MDCAT</p>
-      </div>
-    </div>
-   <div class="!flex !flex-col !justify-center !items-center">
-      <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
-        <div class="absolute -top-3 -right-3 z-10">
-          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
-        </div>
-        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
-      </div>
-      <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
-        <p>Mubashir Iqbal</p>
-        <p>200/200</p>
-        <p>MDCAT</p>
-      </div>
-    </div>
-   <div class="!flex !flex-col !justify-center !items-center">
-      <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
-        <div class="absolute -top-3 -right-3 z-10">
-          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
-        </div>
-        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
-      </div>
-      <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
-        <p>Mubashir Iqbal</p>
-        <p>200/200</p>
-        <p>MDCAT</p>
-      </div>
-    </div>
-   <div class="!flex !flex-col !justify-center !items-center">
-      <div class="relative border-2 rounded-xl flex justify-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
-        <div class="absolute -top-3 -right-3 z-10">
-          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
-        </div>
-        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
-      </div>
-      <div class="flex flex-col relative -mt-6 justify-center text-center bg-[#673AB7] text-white rounded-xl w-44 py-1.5 px-2 text-xs font-semibold shadow">
-        <p>Mubashir Iqbal</p>
-        <p>200/200</p>
-        <p>MDCAT</p>
-      </div>
+
+      <!-- Footer Info -->
+    <div class="flex flex-col relative -mt-6 justify-center text-center 
+            bg-gradient-to-b from-[#673AB7] to-[#2E1A51] 
+            text-white rounded-xl w-44 py-1.5 px-2 
+            text-xs font-semibold shadow">
+  <p>Mubashir Iqbal</p>
+  <p>200/200</p>
+  <p>MDCAT</p>
+</div>
+
     </div>
 
+    <!-- Repeat for other achievers -->
+      <div class="!flex !flex-col !justify-center !items-center flex-shrink-0">
+      
+      <!-- Individual Card Title -->
+      <h2 class="text-[#673AB7] text-[18px] md:text-xl font-bold mb-2 text-center">
+         Our High Achievers
+      </h2>
+
+      <!-- Image Card -->
+      <div class="relative border-2 rounded-xl flex justify-center items-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
+        <div class="absolute -top-3 -right-3 z-10">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+        </div>
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+      </div>
+
+      <!-- Footer Info -->
+    <div class="flex flex-col relative -mt-6 justify-center text-center 
+            bg-gradient-to-b from-[#673AB7] to-[#2E1A51] 
+            text-white rounded-xl w-44 py-1.5 px-2 
+            text-xs font-semibold shadow">
+  <p>Mubashir Iqbal</p>
+  <p>200/200</p>
+  <p>MDCAT</p>
+</div>
+
+    </div>
+  <div class="!flex !flex-col !justify-center !items-center flex-shrink-0">
+      
+      <!-- Individual Card Title -->
+      <h2 class="text-[#673AB7] text-[18px] md:text-xl font-bold mb-2 text-center">
+         Our High Achievers
+      </h2>
+
+      <!-- Image Card -->
+      <div class="relative border-2 rounded-xl flex justify-center items-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
+        <div class="absolute -top-3 -right-3 z-10">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+        </div>
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+      </div>
+
+      <!-- Footer Info -->
+    <div class="flex flex-col relative -mt-6 justify-center text-center 
+            bg-gradient-to-b from-[#673AB7] to-[#2E1A51] 
+            text-white rounded-xl w-44 py-1.5 px-2 
+            text-xs font-semibold shadow">
+  <p>Mubashir Iqbal</p>
+  <p>200/200</p>
+  <p>MDCAT</p>
+</div>
+
+    </div>
+      <div class="!flex !flex-col !justify-center !items-center flex-shrink-0">
+      
+      <!-- Individual Card Title -->
+      <h2 class="text-[#673AB7] text-[18px] md:text-xl font-bold mb-2 text-center">
+         Our High Achievers
+      </h2>
+
+      <!-- Image Card -->
+      <div class="relative border-2 rounded-xl flex justify-center items-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
+        <div class="absolute -top-3 -right-3 z-10">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+        </div>
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+      </div>
+
+      <!-- Footer Info -->
+    <div class="flex flex-col relative -mt-6 justify-center text-center 
+            bg-gradient-to-b from-[#673AB7] to-[#2E1A51] 
+            text-white rounded-xl w-44 py-1.5 px-2 
+            text-xs font-semibold shadow">
+  <p>Mubashir Iqbal</p>
+  <p>200/200</p>
+  <p>MDCAT</p>
+</div>
+
+    </div>
+      <div class="!flex !flex-col !justify-center !items-center flex-shrink-0">
+      
+      <!-- Individual Card Title -->
+      <h2 class="text-[#673AB7] text-[18px] md:text-xl font-bold mb-2 text-center">
+         Our High Achievers
+      </h2>
+
+      <!-- Image Card -->
+      <div class="relative border-2 rounded-xl flex justify-center items-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
+        <div class="absolute -top-3 -right-3 z-10">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+        </div>
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+      </div>
+
+      <!-- Footer Info -->
+    <div class="flex flex-col relative -mt-6 justify-center text-center 
+            bg-gradient-to-b from-[#673AB7] to-[#2E1A51] 
+            text-white rounded-xl w-44 py-1.5 px-2 
+            text-xs font-semibold shadow">
+  <p>Mubashir Iqbal</p>
+  <p>200/200</p>
+  <p>MDCAT</p>
+</div>
+
+    </div>
+      <div class="!flex !flex-col !justify-center !items-center flex-shrink-0">
+      
+      <!-- Individual Card Title -->
+      <h2 class="text-[#673AB7] text-[18px] md:text-xl font-bold mb-2 text-center">
+         Our High Achievers
+      </h2>
+
+      <!-- Image Card -->
+      <div class="relative border-2 rounded-xl flex justify-center items-center border-[#673AB7] w-56 h-64 bg-[#E4D5FF] overflow-hidden">
+        <div class="absolute -top-3 -right-3 z-10">
+          <img src="../Images/medal.png" alt="medal" class="w-[36px] h-[36px]">
+        </div>
+        <img src="../Images/achiver.png" alt="Achiever" class="object-contain h-full px-2">
+      </div>
+
+      <!-- Footer Info -->
+    <div class="flex flex-col relative -mt-6 justify-center text-center 
+            bg-gradient-to-b from-[#673AB7] to-[#2E1A51] 
+            text-white rounded-xl w-44 py-1.5 px-2 
+            text-xs font-semibold shadow">
+  <p>Mubashir Iqbal</p>
+  <p>200/200</p>
+  <p>MDCAT</p>
+</div>
+
+    </div>
   </div>
 </section>
 
 
 <!-- .................................... -->
-
-<section class="w-full px-4 mt-16 max-w-[1440px] mx-auto space-y-10 text-center">
+<section class="w-full px-4 mt-18 max-w-[1440px] mx-auto space-y-10 font-[Manrope]">
 
   <!-- Heading -->
-  <h1 class="text-3xl md:text-5xl font-bold text-blue-900">
-    Endless Journeys, Endless Stories
-  </h1>
+  <div class="max-w-3xl mx-auto text-center">
+    <h1 class="text-[24px] md:text-[32px] lg:text-[44px] xl:text-[48px]
+               font-extrabold leading-[32px] md:leading-[40px] lg:leading-[52px] xl:leading-[58px]
+               bg-gradient-to-b from-[#0B50B8] to-[#052452] text-transparent bg-clip-text">
+      Endless Journeys, Endless Stories
+    </h1>
+  </div>
 
   <!-- Paragraph -->
-  <div class="max-w-4xl mx-auto">
-    <p class="text-base md:text-2xl font-medium text-[#535353] leading-relaxed">
-      Still Unsure? Hear it from Our Alumni. Maxify wasn’t just a stepping stone – it was their launchpad to success.
-      Because success isn’t a destination; it’s a journey. And we’re here to guide you, every step of the way.
+  <div class="max-w-3xl mx-auto text-left">
+    <p class="text-[14px] md:text-[18px] lg:text-[20px] xl:text-[22px]
+              leading-[24px] md:leading-[30px] lg:leading-[34px] xl:leading-[36px]
+              font-medium text-[#535353]">
+      Still unsure? Hear it from our alumni. Maxify wasn’t just a stepping stone –<br class="hidden md:inline">
+      it was their launchpad to success. Because success isn’t a destination; it’s a journey –<br class="hidden md:inline">
+      and we’re here to guide you every step of the way.
     </p>
   </div>
 
   <!-- Button -->
-  <div>
-    <button class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300">
+  <div class="max-w-3xl mx-auto text-left lg:text-center">
+    <button class="bg-red-600 text-white text-sm md:text-base hover:bg-red-700 transition duration-300"
+            style="width: 193px; height: 42px; border-radius: 30px; padding: 12px 39px;">
       Read the Stories
     </button>
   </div>
 
   <!-- Image -->
-  <div class="max-w-6xl mx-auto">
+  <div class="max-w-5xl mx-auto">
     <img src="../Images/lastimg.png" alt="Endless Stories" class="w-full h-auto object-contain" />
   </div>
 
@@ -841,23 +965,33 @@
 
 <!-- ............................................ -->
 
-<section class="w-full px-4 py-10 max-w-[1440px] mx-auto text-center space-y-10">
+<section class="w-full px-4 py-10 max-w-[1440px] mx-auto space-y-8 font-[Manrope]">
 
   <!-- Heading -->
-  <h1 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
-    Unleash your Potential,<br>
-    Redefine the Rules!
-  </h1>
+  <div class="text-center">
+    <h1 class="text-[22px] md:text-[32px] lg:text-[42px] xl:text-[52px] font-bold 
+               leading-[32px] md:leading-[44px] lg:leading-[56px] xl:leading-[68px]
+               bg-gradient-to-b from-[#0B50B8] to-[#052452] text-transparent bg-clip-text">
+      Unleash your Potential,<br>
+      Redefine the Rules!
+    </h1>
+  </div>
 
   <!-- Subheading -->
-  <p class="text-lg md:text-3xl font-medium text-[#535353] leading-relaxed">
-    Over 100K Future Doctors Trust Maxify. Be next.<br>
-    Own your journey.
-  </p>
+  <div class="max-w-3xl mx-auto text-left text-[#535353]">
+    <p class="text-[12px] md:text-[20px] lg:text-[26px] xl:text-[30px] font-semibold 
+              leading-[22px] md:leading-[30px] lg:leading-[36px] xl:leading-[42px]">
+      Over 100K Future Doctors Trust Maxify. Be next.<br>
+      Own your journey.
+    </p>
+  </div>
 
   <!-- Button -->
-  <div>
-    <button class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300">
+  <div class="max-w-3xl mx-auto text-left lg:text-center">
+    <button class="text-white font-semibold text-[13px] leading-[20px]
+                   hover:brightness-110 transition duration-300"
+            style="width: 160px; height: 38px; padding: 10px 30px; border-radius: 30px;
+                   background: linear-gradient(180deg, #FF0000 0%, #990000 100%);">
       Get Started Free
     </button>
   </div>
@@ -867,17 +1001,18 @@
 
 
 <!-- ............................. -->
+<section class="w-full px-4 py-8 max-w-[1440px] mx-auto text-center space-y-4 font-[Manrope]">
 
-<section class="w-full px-4 py-10 max-w-[1440px] mx-auto text-center space-y-10">
-
- 
- <p class="text-2xl md:text-4xl font-semibold text-[#535353]">
-    Start Learning for Free - No Credit Card.
+  <!-- Paragraph -->
+  <p class="text-[16px] md:text-[22px] lg:text-[28px] xl:text-[32px] 
+            leading-[24px] md:leading-[32px] lg:leading-[38px] xl:leading-[42px]
+            font-semibold text-[#535353]">
+    Start Learning for Free – No Credit Card.
   </p>
-  <!-- Button -->
-
 
 </section>
+
+
 </main>
 
 

@@ -15,6 +15,7 @@
 </head>
 
 <body class="bg-white font-sans">
+    
  <div class="flex flex-col lg:flex-row min-h-screen overflow-x-auto p-4">
  <?php
 // no isHomePage set here
