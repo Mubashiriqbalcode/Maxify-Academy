@@ -94,9 +94,18 @@
   </div>
 
   <!-- Cancel Button -->
-  <button class="mt-6 w-[150px] h-[38px] bg-gradient-to-b from-[#673AB7] to-[#2E1A51] text-white rounded-[30px] px-[48px] py-[8px] text-[14px] font-semibold font-[Manrope]">
-    Cancel
-  </button>
+  <button onclick="cancelPayment()"
+  class="mt-6 w-[150px] h-[38px] bg-gradient-to-b from-[#673AB7] to-[#2E1A51] text-white rounded-[30px] px-[48px] py-[8px] text-[14px] font-semibold font-[Manrope]">
+  Cancel
+</button>
+<script>
+  function cancelPayment() {
+    const paymentSection = document.getElementById("paymentDetails");
+    if (paymentSection) {
+      paymentSection.classList.add("hidden");
+    }
+  }
+</script>
 
   <!-- Note -->
   <p class="mt-6 text-[#4B4B4B] max-w-lg font-[Manrope] font-medium text-[16px] leading-[28px]">
@@ -126,14 +135,20 @@
     <!-- Meezan Bank Details -->
     <p>
       <strong class="font-bold">Name:</strong> <span class="font-normal">Meezan Bank</span><br>
-      <span class="flex items-center justify-between">
-        <span><strong class="font-bold">Title:</strong> <span class="font-normal">Maxify LLP</span></span>
-        <img src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px]">
-      </span>
-      <span class="flex items-center justify-between">
-        <span><strong class="font-bold">Account:</strong> <span class="font-normal">102001098566595</span></span>
-        <img src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px]">
-      </span>
+      <!-- Your HTML -->
+<span class="flex items-center justify-between">
+  <span><strong class="font-bold">Title:</strong> <span class="font-normal">Maxify LLP</span></span>
+  <img onclick="copyText(this)" src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px] cursor-pointer">
+</span>
+
+<span class="flex items-center justify-between">
+  <span><strong class="font-bold">Account:</strong> <span class="font-normal">102001098566595</span></span>
+  <img onclick="copyText(this)" src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px] cursor-pointer">
+</span>
+
+<!-- Add this Script at Bottom of Body -->
+
+
     </p>
 
     <!-- International Payments Details -->
@@ -142,14 +157,17 @@
       <span class="flex items-center justify-between">
         <span><strong class="font-bold">Title:</strong> <span class="font-normal">Ali Bin Hassanin</span></span>
       </span>
-      <span class="flex items-center justify-between">
-        <span><strong class="font-bold">Account:</strong> <span class="font-normal">3565252695</span></span>
-        <img src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px]">
-      </span>
-      <span class="flex items-center justify-between">
-        <span><strong class="font-bold">IBAN:</strong> <span class="font-normal">PK745ADAD000003526249853</span></span>
-        <img src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px]">
-      </span>
+    <span class="flex items-center justify-between">
+  <span><strong class="font-bold">Account:</strong> <span class="font-normal">3565252695</span></span>
+  <img src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px] cursor-pointer" onclick="copyText(this)">
+</span>
+
+<span class="flex items-center justify-between">
+  <span><strong class="font-bold">IBAN:</strong> <span class="font-normal">PK745ADAD000003526249853</span></span>
+  <img src="../Images/solar_copy-bold.png" alt="icon" class="w-[20px] h-[20px] cursor-pointer" onclick="copyText(this)">
+</span>
+
+
     </p>
   </div>
 
@@ -209,5 +227,33 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/payment.js"></script>
+<script>
+  function copyText(imgElement) {
+    const textToCopy = imgElement.parentElement.querySelector('.font-normal').textContent;
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        console.log('Copied:', textToCopy); // Optional: you can remove this line
+      })
+      .catch(err => {
+        console.error('Failed to copy:', err);
+      });
+  }
+</script>
+<script>
+  function copyText(imgElement) {
+    // Find the .font-normal span in the same row
+    const textToCopy = imgElement.parentElement.querySelector('.font-normal').textContent;
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        console.log('Copied:', textToCopy); // You can remove this line if you want absolutely no output
+      })
+      .catch(err => {
+        console.error('Failed to copy:', err);
+      });
+  }
+</script>
+
 </body>
 </html>
