@@ -14,27 +14,39 @@
     }
   </style>
 </head>
-<!-- MOBILE HEADER -->
-<header class="lg:hidden flex justify-between items-center px-4 py-3 bg-white shadow-md fixed top-0 left-0 w-full z-50">
-  <!-- Sidebar Toggle Button -->
-  <button onclick="toggleSidebar()" class="w-[21px] h-[21px]">
-    <img src="../Images/quill_hamburger.png" alt="Menu Icon" class="w-full h-full object-contain" />
-  </button>
 
-  <!-- Centered Logo -->
-  <div class="absolute left-1/2 transform -translate-x-1/2">
-    <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
-  </div>
-</header>
 <body class="bg-gray-100">
 
-  <div class="flex flex-col lg:flex-row min-h-screen p-3">
- <?php
-// no isHomePage set here
-include '../Includes/Sidebar.php';
-?>
 
-    <!-- Checkout Section Start -->
+  <!-- 📱 Mobile Header -->
+  <header class="lg:hidden flex justify-between items-center px-4 py-3 bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <!-- Sidebar Toggle Button -->
+    <button onclick="toggleSidebar()" class="w-[24px] h-[24px]">
+      <img src="../Images/quill_hamburger.png" alt="Menu Icon" class="w-full h-full object-contain" />
+    </button>
+
+    <!-- Centered Logo -->
+    <div class="absolute left-1/2 transform -translate-x-1/2">
+      <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
+    </div>
+  </header>
+
+  <!-- 🔲 Overlay Background (for mobile only) -->
+  <div id="sidebarOverlay" 
+       class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-30 hidden lg:hidden" 
+       onclick="toggleSidebar()">
+  </div>
+
+  <!-- 🌐 Full Layout with Sidebar and Main Content -->
+  <div class="flex flex-col lg:flex-row min-h-screen pt-[64px] lg:pt-0">
+
+    <!-- 📚 Sidebar -->
+    <aside id="sidebar"
+      class="fixed lg:static top-0 left-0 z-[60] bg-white w-[240px] h-screen transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out shadow lg:shadow-none">
+      <?php include '../Includes/Sidebar.php'; ?>
+    </aside>
+
+    <!-- 📝 Main Content -->
     <main class="flex-1 w-full max-w-full px-4 py-6">
       <div class="w-full  mx-autorounded-2xl p-6 space-y-6">
 
@@ -223,6 +235,21 @@ include '../Includes/Sidebar.php';
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/payment.js"></script>
+  <script>
+      function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      const overlay = document.getElementById("sidebarOverlay");
+      const isOpen = !sidebar.classList.contains("-translate-x-full");
+
+      if (isOpen) {
+        sidebar.classList.add("-translate-x-full");
+        overlay?.classList.add("hidden");
+      } else {
+        sidebar.classList.remove("-translate-x-full");
+        overlay?.classList.remove("hidden");
+      }
+    }
+  </script>
 </body>
 
 </html>

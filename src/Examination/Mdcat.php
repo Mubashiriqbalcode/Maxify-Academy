@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MDCAT Prep Hub</title>
+   <link href="/src/input.css" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/Mdcat.css">
@@ -16,15 +17,54 @@
 
 <body class="bg-white font-sans">
     
- <div class="flex flex-col lg:flex-row min-h-screen overflow-x-auto p-4">
- <?php
-// no isHomePage set here
-include '../Includes/Sidebar.php';
-?>
+<!-- 📱 Mobile Header -->
+<header class="lg:hidden flex justify-between items-center px-4 py-3 bg-white shadow-md fixed top-0 left-0 w-full z-50">
+  <!-- Sidebar Toggle Button -->
+  <button onclick="toggleSidebar()" class="w-[24px] h-[24px]">
+    <img src="../Images/quill_hamburger.png" alt="Menu Icon" class="w-full h-full object-contain" />
+  </button>
 
-   
-     
-    <!-- Main Content -->
+  <!-- Centered Logo -->
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
+  </div>
+</header>
+
+<!-- 📦 Page Layout -->
+<div class="flex flex-col lg:flex-row min-h-screen pt-[64px] lg:pt-0">
+
+<!-- Overlay Background (mobile only) -->
+<div id="sidebarOverlay" 
+     class="fixed top-[64px] left-0 w-full h-[calc(100vh-64px)] bg-black bg-opacity-40 z-30 hidden lg:hidden" 
+     onclick="toggleSidebar()">
+</div>
+
+
+<!-- 📚 Sidebar -->
+<aside id="sidebar"
+  class="fixed lg:static top-0 left-0 z-[60] bg-white w-[240px] h-screen transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out shadow lg:shadow-none">
+  <?php include '../Includes/Sidebar.php'; ?>
+</aside>
+
+
+<script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const isOpen = !sidebar.classList.contains("-translate-x-full");
+
+    if (isOpen) {
+      sidebar.classList.add("-translate-x-full");
+      overlay?.classList.add("hidden");
+    } else {
+      sidebar.classList.remove("-translate-x-full");
+      overlay?.classList.remove("hidden");
+    }
+  }
+</script>
+
+
+  <!-- 📝 Main Content Area -->
   <main class="flex-1 w-full max-w-full px-4 py-6">
       
         

@@ -13,18 +13,33 @@
   </style>
 </head>
 <body class="bg-[#F5F5F5] text-[#3F3F3F]">
+<!-- 🧾 HEADER (mobile only) -->
+<header class="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4 py-3 flex justify-between items-center">
+  <button onclick="toggleSidebar()" class="w-6 h-6">
+    <img src="../Images/quill_hamburger.png" alt="Menu" class="w-full h-full object-contain" />
+  </button>
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
+  </div>
+</header>
 
-<div class="flex flex-col lg:flex-row min-h-screen p-4 gap-6">
+<!-- OVERLAY (for mobile sidebar toggle) -->
+<div id="sidebarOverlay"
+  class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 z-40 hidden lg:hidden"
+  onclick="toggleSidebar()">
+</div>
+
+<!-- PAGE WRAPPER -->
+<div class="flex flex-col lg:flex-row min-h-screen pt-[64px] lg:pt-0 gap-4 px-4">
 
   <!-- SIDEBAR -->
-         <?php
-// no isHomePage set here
-include '../Includes/Sidebar.php';
-?>
-
+  <aside id="sidebar"
+    class="fixed lg:static top-0 left-0 z-50 bg-white w-[240px] h-screen transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out shadow lg:shadow-none">
+    <?php include '../Includes/Sidebar.php'; ?>
+  </aside>
 
   <!-- MAIN CONTENT -->
-  <main class="flex-1 p-4 lg:p-6  rounded-xl ">
+  <main class="flex-1 p-4 lg:p-6 rounded-xl bg-white shadow">
     <h1 class="text-[36px] font-bold leading-[42px] text-[#673AB7] mb-8">Payment & Checkout</h1>
 
     <div class="grid lg:grid-cols-2 gap-10">

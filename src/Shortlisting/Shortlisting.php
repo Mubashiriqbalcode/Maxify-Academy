@@ -16,15 +16,27 @@
 </head>
 
 <body class="bg-white min-h-screen flex items-start justify-center gap-10 p-6 relative">
+ <header class="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4 py-3 flex justify-between items-center">
+  <button onclick="toggleSidebar()" class="w-6 h-6">
+    <img src="../Images/quill_hamburger.png" alt="Menu" class="w-full h-full object-contain" />
+  </button>
+  <div class="absolute left-1/2 transform -translate-x-1/2">
+    <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
+  </div>
+</header>
 
-  <!-- Sidebar -->
- <?php
-// no isHomePage set here
-include '../Includes/Sidebar.php';
-?>
-<!-- Main Content -->
-  <!-- Main Content -->
-  <div class="w-full max-w-4xl relative mx-auto">
+<!-- 📱 Mobile Overlay -->
+<div id="sidebarOverlay"
+     class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 z-40 hidden lg:hidden"
+     onclick="toggleSidebar()">
+</div>
+  <!-- 📚 Sidebar -->
+  <aside id="sidebar"
+         class="fixed lg:static top-0 left-0 z-50 bg-white w-[240px] h-screen transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out shadow lg:shadow-none">
+    <?php include '../Includes/Sidebar.php'; ?>
+  </aside>
+
+   <main class="flex-1 px-4 py-6 lg:pl-6 space-y-8 max-w-full overflow-x-hidden">
     <h1 class="text-2xl md:text-3xl font-semibold text-purple-700 mb-10 font-[Manrope] text-center">Shortlisting</h1>
 
     <!-- Subject Cards Container -->
@@ -156,13 +168,23 @@ include '../Includes/Sidebar.php';
 
     </div>
   </div>
-
- <script src="js/Shortlisting.js"></script>
+  <!-- 🔁 Toggle Script -->
 <script>
-    
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
 
-    
-
+    const isOpen = !sidebar.classList.contains("-translate-x-full");
+    if (isOpen) {
+      sidebar.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
+    } else {
+      sidebar.classList.remove("-translate-x-full");
+      overlay.classList.remove("hidden");
+    }
+  }
+</script>
+<script>
  document.addEventListener('DOMContentLoaded', function() {
             // Select all dropdown content containers and arrow icons using classes
             const dropdownContents = document.querySelectorAll('.dropdown-content');
@@ -355,6 +377,15 @@ include '../Includes/Sidebar.php';
             initializeActiveState();
         });
 
+  function toggleDropdown(id, element) {
+    // Hide other dropdowns
+    document.querySelectorAll('[id$="Dropdown"]').forEach(drop => {
+      if (drop.id !== id) drop.classList.add('hidden');
+    });
+
+    const dropdown = document.getElementById(id);
+    dropdown.classList.toggle('hidden');
+  }
 
 </script>
 </body>

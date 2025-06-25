@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maxify Academy</title>
-    <link href="./input.css" rel="stylesheet">
+    <link href="/src/input.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <!-- Slick Carousel CSS -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -42,7 +42,7 @@
 </header>
 
 <!-- MAIN WRAPPER -->
-<div class="grid lg:grid-cols-[260px_1fr] min-h-screen pt-[60px] lg:pt-0">
+<div class="grid lg:grid-cols-[260px_1fr] min-h-screen pt-[60px] lg:pt-0 ">
 
   <!-- SIDEBAR -->
 <aside
@@ -102,11 +102,11 @@
           </div>
 
           <!-- Shortlisting -->
-          <div class="rounded-lg flex items-center justify-around p-2 h-[48px] text-blue-800 hover:bg-blue-50 transition"
-               style="border: 1px solid #052452; box-shadow: 4px 19px 20px -15px #0B50B8;">
-            <img src="../Images/fluent_clipboard-task-list-20-filled.png" alt="Shortlisting" class="w-5 h-5">
-            <span class="text-sm font-semibold">Shortlisting</span>
-          </div>
+      <a href="../Shortlisting/Shortlisting.php"class="rounded-lg flex items-center justify-around p-2 h-[48px] text-blue-800 hover:bg-blue-50 transition" style="border: 1px solid #052452; box-shadow: 4px 19px 20px -15px #0B50B8;"
+>
+  <img src="../Images/fluent_clipboard-task-list-20-filled.png" alt="Shortlisting" class="w-5 h-5 mr-2">
+  <span class="text-sm font-semibold">Shortlisting</span>
+</a>
 
           <!-- F.SC -->
           <div class="rounded-lg flex items-center justify-around p-2 h-[48px] text-green-700 hover:bg-green-50 transition"

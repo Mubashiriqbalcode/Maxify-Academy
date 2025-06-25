@@ -1,41 +1,4 @@
 
-//  JS to Handle Payment Selection 
-
- const cards = document.querySelectorAll('.payment-card');
-  const paymentDetails = document.getElementById('paymentDetails');
-
-  cards.forEach(card => {
-    card.addEventListener('click', () => {
-      // Reset all cards
-      cards.forEach(c => {
-        c.classList.remove('border-[#673AB7]', 'shadow-[0px_10px_40px_0px_#673AB785]');
-        c.querySelector('.custom-radio').classList.remove('border-[#673AB7]');
-        const dot = c.querySelector('.custom-radio-dot');
-        if (dot) dot.remove();
-      });
-
-      // Activate selected
-      card.classList.add('border-[#673AB7]', 'shadow-[0px_10px_40px_0px_#673AB785]');
-      const radio = card.querySelector('.custom-radio');
-      radio.classList.add('border-[#673AB7]');
-      const circle = document.createElement('div');
-      circle.className = 'custom-radio-dot absolute top-[5px] left-[5px] w-[10px] h-[10px] bg-[#673AB7] rounded-full';
-      radio.appendChild(circle);
-
-      // Check radio
-      card.querySelector('input[type="radio"]').checked = true;
-      paymentDetails.classList.remove('hidden');
-    });
-  });
-
-
-//   ...............................................................
-
-
-// dropdwon sidebar
-
-
-
     
 
  document.addEventListener('DOMContentLoaded', function() {
@@ -231,9 +194,3 @@
         });
 
 
-
-        // ......................................................................
-
-        
-    // Show all cards on plan button click
- 

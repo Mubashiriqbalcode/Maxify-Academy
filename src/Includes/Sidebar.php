@@ -109,7 +109,7 @@
       <!-- Dashboard -->
       <div class="menu-item flex items-center px-3 h-[46px] rounded-[11px]" data-id="dashboard">
         <img src="../Images/dashboard4x.png" class="icon h-[19px] w-[19px]">
-        <a href="Dashboard.php" class="font-bold px-3 py-2">Dashboard</a>
+        <a href="../Dashboard/Dashboard.php" class="font-bold px-3 py-2">Dashboard</a>
       </div>
 
       <!-- Pricing -->

@@ -9,43 +9,26 @@
 </head>
 
 <body class="bg-white text-[#3F3F3F] font-sans">
-  <header class="lg:hidden flex justify-between items-center px-4 py-3 bg-white shadow-md fixed top-0 left-0 w-full z-50">
-  <!-- Sidebar Toggle Button -->
-  <button onclick="toggleSidebar()" class="w-[21px] h-[21px]">
-    <img src="../Images/quill_hamburger.png" alt="Menu Icon" class="w-full h-full object-contain" />
+  <header class="lg:hidden fixed top-0 left-0 w-full bg-white shadow-md z-50 px-4 py-3 flex justify-between items-center">
+  <button onclick="toggleSidebar()" class="w-6 h-6">
+    <img src="../Images/quill_hamburger.png" alt="Menu" class="w-full h-full object-contain" />
   </button>
-
-  <!-- Centered Logo -->
   <div class="absolute left-1/2 transform -translate-x-1/2">
     <img src="../Images/maxfylogo.png" alt="Logo" class="w-[46px] h-[46px] object-contain" />
   </div>
 </header>
   <div class="min-h-screen w-full max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-6">
 
-    <!-- SIDEBAR -->
-<aside
-  id="mobileSidebar"
-  class="fixed lg:static lg:translate-x-0 top-0 left-0 h-full lg:h-auto w-[250px] lg:w-full bg-[#E4E4E4] shadow-lg 
-         z-60 transform -translate-x-full lg:transform-none transition-transform duration-300">
-  
-  <!-- Close Button (Visible on Mobile Only) -->
-  <div class="flex justify-end p-3 lg:hidden">
-    <button onclick="toggleSidebar()" class="text-[#673AB7] font-bold text-xl">
-      ✕
-    </button>
-  </div>
-
-  <?php
-    $isHomePage = true;
-    include '../Includes/Sidebar.php';
-  ?>
-</aside>
-<script>
-  function toggleSidebar() {
-    const sidebar = document.getElementById('mobileSidebar');
-    sidebar.classList.toggle('-translate-x-full');
-  }
-</script>
+<!-- 📱 Mobile Overlay -->
+<div id="sidebarOverlay"
+     class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-40 z-40 hidden lg:hidden"
+     onclick="toggleSidebar()">
+</div>
+  <!-- 📚 Sidebar -->
+  <aside id="sidebar"
+         class="fixed lg:static top-0 left-0 z-50 bg-white w-[240px] h-screen transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out shadow lg:shadow-none">
+    <?php include '../Includes/Sidebar.php'; ?>
+  </aside>
 
 
     <!-- ✅ Main Content (Fully Adjusted) -->
@@ -577,6 +560,21 @@
   </div>
 
     <script src="js/Quizbuilder.js"></script>
+   <script>
+  function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    const isOpen = !sidebar.classList.contains("-translate-x-full");
+    if (isOpen) {
+      sidebar.classList.add("-translate-x-full");
+      overlay.classList.add("hidden");
+    } else {
+      sidebar.classList.remove("-translate-x-full");
+      overlay.classList.remove("hidden");
+    }
+  }
+</script>
 </body>
 
 </html>
