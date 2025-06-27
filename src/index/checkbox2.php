@@ -214,39 +214,145 @@ include '../Includes/Sidebar.php';
 
 
         <!-- Options Container -->
-<div class="space-y-3">
+<div class="space-y-4" id="optionContainer">
 
   <!-- Option 1 -->
-  <label class="flex items-center h-[70px] rounded-[10px] border-2 border-gray-300 transition-colors duration-150 px-5">
-    <input type="radio" name="answer" class="w-[32px] h-[32px] text-blue-600">
-    <span class="ml-3 text-gray-700 text-[16px]">Nucleus</span>
-  </label>
+  <div class="option-box border-2 border-gray-300 rounded-[10px] px-6 py-4 transition-all duration-300">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <input type="radio" name="answer" class="option-radio w-[36px] h-[36px] text-blue-600" value="1">
+        <span class="ml-3 text-gray-700 text-[17px]">Nucleus</span>
+      </div>
+      <button class="explain-btn hidden text-white text-sm font-medium rounded-full px-6 py-2"
+        style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Explanation</button>
+    </div>
+    <div class="explanation-wrapper max-h-0 overflow-hidden transition-all duration-500">
+      <p class="text-sm text-gray-600 mt-4">The nucleus is the control center of the cell.</p>
+    </div>
+  </div>
 
   <!-- Option 2 -->
-  <label class="flex items-center h-[70px] rounded-[10px] border-2 border-gray-300 transition-colors duration-150 px-5">
-    <input type="radio" name="answer" class="w-[32px] h-[32px] text-blue-600">
-    <span class="ml-3 text-gray-700 text-[16px]">Ribosome</span>
-  </label>
+  <div class="option-box border-2 border-gray-300 rounded-[10px] px-6 py-4 transition-all duration-300">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <input type="radio" name="answer" class="option-radio w-[36px] h-[36px] text-blue-600" value="2">
+        <span class="ml-3 text-gray-700 text-[17px]">Ribosome</span>
+      </div>
+      <button class="explain-btn hidden text-white text-sm font-medium rounded-full px-6 py-2"
+        style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Explanation</button>
+    </div>
+    <div class="explanation-wrapper max-h-0 overflow-hidden transition-all duration-500">
+      <p class="text-sm text-gray-600 mt-4">Ribosomes are responsible for protein synthesis.</p>
+    </div>
+  </div>
 
   <!-- Option 3 -->
-  <label class="flex items-center h-[70px] rounded-[10px] border-2 border-gray-300 transition-colors duration-150 px-5">
-    <input type="radio" name="answer" class="w-[32px] h-[32px] text-blue-600">
-    <span class="ml-3 text-gray-700 text-[16px]">Mitochondrion</span>
-  </label>
+  <div class="option-box border-2 border-gray-300 rounded-[10px] px-6 py-4 transition-all duration-300">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <input type="radio" name="answer" class="option-radio w-[36px] h-[36px] text-blue-600" value="3">
+        <span class="ml-3 text-gray-700 text-[17px]">Mitochondrion</span>
+      </div>
+      <button class="explain-btn hidden text-white text-sm font-medium rounded-full px-6 py-2"
+        style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Explanation</button>
+    </div>
+    <div class="explanation-wrapper max-h-0 overflow-hidden transition-all duration-500">
+      <p class="text-sm text-gray-600 mt-4">Mitochondria are the powerhouse of the cell.</p>
+    </div>
+  </div>
 
   <!-- Option 4 -->
-  <label class="flex items-center h-[70px] rounded-[10px] border-2 border-gray-300 transition-colors duration-150 px-5">
-    <input type="radio" name="answer" class="w-[32px] h-[32px] text-blue-600">
-    <span class="ml-3 text-gray-700 text-[16px]">Golgi Apparatus</span>
-  </label>
+  <div class="option-box border-2 border-gray-300 rounded-[10px] px-6 py-4 transition-all duration-300">
+    <div class="flex justify-between items-center">
+      <div class="flex items-center">
+        <input type="radio" name="answer" class="option-radio w-[36px] h-[36px] text-blue-600" value="4">
+        <span class="ml-3 text-gray-700 text-[17px]">Golgi Apparatus</span>
+      </div>
+      <button class="explain-btn hidden text-white text-sm font-medium rounded-full px-6 py-2"
+        style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Explanation</button>
+    </div>
+    <div class="explanation-wrapper max-h-0 overflow-hidden transition-all duration-500">
+      <p class="text-sm text-gray-600 mt-4">The Golgi apparatus modifies and packages proteins.</p>
+    </div>
+  </div>
 
 </div>
+
+<!-- Script -->
+<script>
+  const radios = document.querySelectorAll('.option-radio');
+  const optionBoxes = document.querySelectorAll('.option-box');
+
+  radios.forEach((radio, index) => {
+    radio.addEventListener('change', () => {
+      optionBoxes.forEach((box, i) => {
+        const btn = box.querySelector('.explain-btn');
+        const wrapper = box.querySelector('.explanation-wrapper');
+
+        if (i === index) {
+          btn.classList.remove('hidden');
+          wrapper.style.maxHeight = '0px'; // Collapse explanation initially
+        } else {
+          btn.classList.add('hidden');
+          wrapper.style.maxHeight = '0px'; // Collapse all others
+        }
+      });
+    });
+  });
+
+  const explainButtons = document.querySelectorAll('.explain-btn');
+  explainButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      const wrapper = optionBoxes[index].querySelector('.explanation-wrapper');
+      const isOpen = wrapper.style.maxHeight && wrapper.style.maxHeight !== '0px';
+      wrapper.style.maxHeight = isOpen ? '0px' : wrapper.scrollHeight + 'px';
+    });
+  });
+</script>
+
 
 
 
     </div>
 
 
+<div class="flex justify-center items-center gap-2 w-full h-[32px]">
+
+  <!-- Back Arrow -->
+  <button class="w-[32px] h-[32px] flex items-center justify-center rounded-[4px] bg-white border border-[#DFE3E8]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#637381" viewBox="0 0 16 16">
+      <path d="M11 14L5 8l6-6" stroke="#637381" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- Page 1 - Active -->
+ <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    1
+  </button>
+
+  <!-- Page 2 - Default -->
+  <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    2
+  </button>
+
+  <!-- Page 3 - Default -->
+  <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    3
+  </button>
+
+  <!-- Ellipsis -->
+  <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    ...
+  </button>
+
+  <!-- Next Arrow -->
+  <button class="w-[32px] h-[32px] flex items-center justify-center rounded-[4px] bg-white border border-[#DFE3E8]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#637381" viewBox="0 0 16 16">
+      <path d="M5 14l6-6-6-6" stroke="#637381" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+</div>
 
   </main>
   

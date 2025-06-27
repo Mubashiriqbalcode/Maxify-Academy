@@ -35,21 +35,46 @@ include '../Includes/Sidebar.php';
 
       <!-- Mode Switcher Tabs -->
      
-  <!-- Mode Switcher Buttons -->
-  <div id="mode-switcher" class="w-full max-w-4xl mx-auto border-2 border-purple-600 rounded-[10px] p-4 mb-6">
-    <div class="flex flex-col sm:flex-row justify-center gap-3">
+<div id="mode-switcher" class="w-full max-w-4xl mx-auto border-2 border-purple-600 rounded-[10px] p-4 mb-6">
+  <div class="flex flex-col sm:flex-row justify-center gap-3">
+
+    <!-- Tutor Mode Button -->
+    <a href="../index/checkbox2.php" class="w-full sm:w-[480px]">
       <button id="tutorBtn"
-        class="w-full sm:w-[480px] h-[80px] rounded-[10px] bg-[#673AB7] text-white flex items-center justify-between px-5 py-3 transition">
+        class="mode-btn w-full h-[80px] rounded-[10px] bg-white text-[#673AB7] flex items-center justify-between px-5 py-3 transition border border-[#673AB7]">
         <span class="text-lg font-semibold">Tutor Mode</span>
-        <span class="w-[100px] h-[40px] bg-white text-[#673AB7] text-xs font-semibold flex items-center justify-center rounded-full">Free</span>
+        <span class="w-[100px] h-[40px] bg-[#673AB7] text-white text-xs font-semibold flex items-center justify-center rounded-full">Free</span>
       </button>
+    </a>
+
+    <!-- Timed Test Mode Button -->
+    <a href="../index/checkbox2.php" class="w-full sm:w-[480px]">
       <button id="testBtn"
-        class="w-full sm:w-[480px] h-[80px] rounded-[10px] bg-purple-100 text-[#673AB7] flex items-center justify-between px-5 py-3 transition">
+        class="mode-btn w-full h-[80px] rounded-[10px] bg-white text-[#673AB7] flex items-center justify-between px-5 py-3 transition border border-[#673AB7]">
         <span class="text-lg font-semibold">Timed Test Mode</span>
-        <span class="w-[100px] h-[40px] bg-white text-[#673AB7] text-xs font-semibold flex items-center justify-center rounded-full">Free</span>
+        <span class="w-[100px] h-[40px] bg-[#673AB7] text-white text-xs font-semibold flex items-center justify-center rounded-full">Free</span>
       </button>
-    </div>
+    </a>
+
   </div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.mode-btn');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => {
+        b.classList.remove('bg-[#673AB7]', 'text-white');
+        b.classList.add('bg-white', 'text-[#673AB7]');
+      });
+
+      btn.classList.remove('bg-white', 'text-[#673AB7]');
+      btn.classList.add('bg-[#673AB7]', 'text-white');
+    });
+  });
+</script>
+
 
   <!-- Tutor Mode Content -->
   <div id="tutorContent" class="bg-white rounded-[10px] p-8 shadow-[10px_40px_80px_0px_rgba(0,0,0,0.25)] max-w-5xl mx-auto">

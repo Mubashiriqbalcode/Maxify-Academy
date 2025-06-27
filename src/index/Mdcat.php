@@ -172,7 +172,7 @@
                         <img src="../Images/chap1.png" class="w-[36px] h-[36px]" alt="Chapter 1 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -182,7 +182,7 @@
                         <img src="../Images/chap2.png" class="w-[36px] h-[36px]" alt="Chapter 2 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -214,7 +214,7 @@
                         <img src="../Images/chap1.png" class="w-[36px] h-[36px]" alt="Chapter 1 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -224,7 +224,7 @@
                         <img src="../Images/chap2.png" class="w-[36px] h-[36px]" alt="Chapter 2 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -257,7 +257,7 @@
                         <img src="../Images/chap1.png" class="w-[36px] h-[36px]" alt="Chapter 1 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -267,7 +267,7 @@
                         <img src="../Images/chap2.png" class="w-[36px] h-[36px]" alt="Chapter 2 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -300,7 +300,7 @@
                         <img src="../Images/chap1.png" class="w-[36px] h-[36px]" alt="Chapter 1 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -310,7 +310,7 @@
                         <img src="../Images/chap2.png" class="w-[36px] h-[36px]" alt="Chapter 2 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -343,7 +343,7 @@
                         <img src="../Images/chap1.png" class="w-[36px] h-[36px]" alt="Chapter 1 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -353,7 +353,7 @@
                         <img src="../Images/chap2.png" class="w-[36px] h-[36px]" alt="Chapter 2 Icon" />
                         <span class="text-[18px] font-semibold text-gray-800"> Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                                 style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -402,7 +402,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">UHS MDCAT 2024</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -410,7 +410,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">KPK MDCAT 2024</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -444,7 +444,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -452,7 +452,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -485,7 +485,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -493,7 +493,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -526,7 +526,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -534,7 +534,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -567,7 +567,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -575,7 +575,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -612,7 +612,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">UHS MDCAT 2024</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -620,7 +620,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">KPK MDCAT 2024</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -654,7 +654,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -662,7 +662,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -695,7 +695,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -703,7 +703,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -736,7 +736,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -744,7 +744,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -777,7 +777,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Grammar</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>
@@ -785,7 +785,7 @@
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center px-3 py-2 rounded-md">
                     <div class="flex items-center gap-3 pl-4"> <span class="text-[18px] font-semibold text-gray-800">Vocabulary</span>
                     </div>
-                    <a href="checkbox.html">
+                    <a href="../index/tutormode.php">
                         <button class="text-white text-xs font-medium rounded-full px-5 py-1.5"
                             style="background: linear-gradient(180deg, #673AB7 0%, #2E1A51 100%);">Attempt</button>
                     </a>

@@ -29,19 +29,19 @@
            class="ml-6 overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex flex-col space-y-1 dropdown-content">
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="mdcat">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../Examination/Mdcat.php" class="font-bold px-3 py-2">MDCAT</a>
+          <a href="../index/Mdcat.php" class="font-bold px-3 py-2">MDCAT</a>
         </div>
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="nums">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../Examination/Nums.php" class="font-bold px-3 py-2">NUMS</a>
+          <a href="../index/Nums.php" class="font-bold px-3 py-2">NUMS</a>
         </div>
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="fsc">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../Examination/Fsc.php" class="font-bold px-3 py-2">F.Sc</a>
+          <a href="../index/Fsc.php" class="font-bold px-3 py-2">F.Sc</a>
         </div>
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="quiz-builder">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../QuizBuilder/QuizBuilder.php" class="font-bold px-3 py-2">Quiz Builder</a>
+          <a href="../index/QuizBuilder.php" class="font-bold px-3 py-2">Quiz Builder</a>
         </div>
       </div>
     <?php else: ?>
@@ -60,19 +60,19 @@
            class="ml-6 overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex flex-col space-y-1 dropdown-content">
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="mdcat">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../Examination/Mdcat.php" class="font-bold px-3 py-2">MDCAT</a>
+          <a href="../index/Mdcat.php" class="font-bold px-3 py-2">MDCAT</a>
         </div>
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="nums">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../Examination/Nums.php" class="font-bold px-3 py-2">NUMS</a>
+          <a href="../index/Nums.php" class="font-bold px-3 py-2">NUMS</a>
         </div>
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="fsc">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../Examination/Fsc.php" class="font-bold px-3 py-2">F.Sc</a>
+          <a href="../index/Fsc.php" class="font-bold px-3 py-2">F.Sc</a>
         </div>
         <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="quiz-builder">
           <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="../QuizBuilder/QuizBuilder.php" class="font-bold px-3 py-2">Quiz Builder</a>
+          <a href="../index/QuizBuilder.php" class="font-bold px-3 py-2">Quiz Builder</a>
         </div>
       </div>
     <?php endif; ?>
@@ -96,14 +96,7 @@
 
       <div id="aboutDropdown"
            class="ml-6 overflow-hidden max-h-0 transition-all duration-500 ease-in-out flex flex-col space-y-1 dropdown-content">
-        <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="team">
-          <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="Team.php" class="font-bold px-3 py-2">Our Team</a>
-        </div>
-        <div class="menu-item flex items-center px-3 h-[38px] rounded-[11px]" data-id="contact">
-          <img src="../Images/courseicon.png" class="icon h-[19px] w-[19px]">
-          <a href="Contact.php" class="font-bold px-3 py-2">Contact Us</a>
-        </div>
+       
       </div>
 
       <!-- Dashboard -->

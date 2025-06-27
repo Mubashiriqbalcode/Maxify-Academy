@@ -106,7 +106,7 @@
           </div>
 
           <!-- Shortlisting -->
-      <a href="../Shortlisting/Shortlisting.php"class="rounded-lg flex items-center justify-around p-2 h-[48px] text-blue-800 hover:bg-blue-50 transition" style="border: 1px solid #052452; box-shadow: 4px 19px 20px -15px #0B50B8;"
+      <a href="../index/Shortlisting.php"class="rounded-lg flex items-center justify-around p-2 h-[48px] text-blue-800 hover:bg-blue-50 transition" style="border: 1px solid #052452; box-shadow: 4px 19px 20px -15px #0B50B8;"
 >
   <img src="../Images/fluent_clipboard-task-list-20-filled.png" alt="Shortlisting" class="w-5 h-5 mr-2">
   <span class="text-sm font-semibold">Shortlisting</span>

@@ -247,24 +247,46 @@ Dummy Text
 
 
     </div>
-<div class="flex justify-center py-4">
-            <div class="flex space-x-2">
-                <span class="block w-2 h-2 bg-purple-600 rounded-full cursor-pointer hover:bg-purple-700 transition-colors duration-150"></span>
-                <span class="block w-2 h-2 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-150"></span>
-                <span class="block w-2 h-2 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-150"></span>
-                <span class="block w-2 h-2 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-150"></span>
-                <span class="block w-2 h-2 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-150"></span>
-                <span class="text-gray-500 px-1">...</span> <!-- Ellipsis -->
-                <span class="block w-2 h-2 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-150"></span>
-                <span class="block w-2 h-2 bg-gray-400 rounded-full cursor-pointer hover:bg-gray-500 transition-colors duration-150"></span>
-            </div>
-        </div>
-  </main>
-  
-</div>
+
 
     <div class="w-full px-4 py-6 space-y-6">
+<div class="flex justify-center items-center gap-2 w-full h-[32px]">
 
+  <!-- Back Arrow -->
+  <button class="w-[32px] h-[32px] flex items-center justify-center rounded-[4px] bg-white border border-[#DFE3E8]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#637381" viewBox="0 0 16 16">
+      <path d="M11 14L5 8l6-6" stroke="#637381" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <!-- Page 1 - Active -->
+ <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    1
+  </button>
+
+  <!-- Page 2 - Default -->
+  <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    2
+  </button>
+
+  <!-- Page 3 - Default -->
+  <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    3
+  </button>
+
+  <!-- Ellipsis -->
+  <button class="w-[32px] h-[32px] rounded-[4px] bg-white border border-[#DFE3E8] text-sm text-gray-700">
+    ...
+  </button>
+
+  <!-- Next Arrow -->
+  <button class="w-[32px] h-[32px] flex items-center justify-center rounded-[4px] bg-white border border-[#DFE3E8]">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#637381" viewBox="0 0 16 16">
+      <path d="M5 14l6-6-6-6" stroke="#637381" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+</div>
 </div>
     <script src="js/Quizbuilder.js"></script>
     </body>
